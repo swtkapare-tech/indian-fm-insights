@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://swtkapare-tech.github.io/indian-fm-insights/sitemap.xml
+Sitemap: https://indianfminsights.site/sitemap.xml
