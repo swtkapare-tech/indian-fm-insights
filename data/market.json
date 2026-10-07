@@ -1,0 +1,18 @@
+{
+  "as_of": "2026-10-07T15:30:00+05:30",
+  "label": "Verified close",
+  "note": "Seeded snapshot. Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
+  "quotes": {
+    "nifty":  { "value": 22603.05, "change": -173.05, "pct": -0.76, "dp": 2 },
+    "sensex": { "value": 72608.90, "change": -458.91, "pct": -0.63, "dp": 2 },
+    "usdinr": { "value": 96.45,    "change": 0.10,    "pct": 0.10,  "dp": 2 },
+    "gold":   { "value": 150068,   "change": 245,     "pct": 0.16,  "dp": 0 },
+    "silver": { "value": 228122,   "change": null,    "pct": null,  "dp": 0 }
+  },
+  "sources": [
+    "Nifty 50 close 22,603.05 (-0.76%) - Business Upturn market report, 7 Oct 2026",
+    "Sensex close 72,608.90 (-458.91 pts) - MarketsMojo closing report, 7 Oct 2026",
+    "Rupee 96.45 vs USD ahead of the RBI policy decision - PTI via HDFC Sky, 7 Oct 2026",
+    "24K gold Rs 1,50,068 per 10 g; 999 silver Rs 2,28,122 per kg - All India Bullion benchmark, 7 Oct 2026"
+  ]
+}
