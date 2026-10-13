@@ -234,6 +234,23 @@ def update_sitemap(site, p, report):
         report.append("OK   sitemap lastmod -> %s" % iso)
 
 
+def update_feed(site, p, report):
+    path = os.path.join(site, "feed.xml")
+    if not os.path.exists(path):
+        return
+    iso = (p.get("as_of") or "")[:10]
+    if not iso:
+        return
+    now = iso + "T16:30:00+05:30"
+    with open(path, encoding="utf-8") as fh:
+        xml = fh.read()
+    new = re.sub(r"<updated>[^<]*</updated>", "<updated>%s</updated>" % now, xml)
+    if new != xml:
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(new)
+        report.append("OK   feed updated -> %s" % now)
+
+
 def init_markers(site):
     """One-time: wrap the known regions with marker comments (idempotent)."""
     specs = {
@@ -290,6 +307,7 @@ def main():
     update_file(os.path.join(a.site_dir, "markets.html"), "MOVED", render_markets_moved(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "BULLION", render_markets_bullion(p), rep)
     update_sitemap(a.site_dir, p, rep)
+    update_feed(a.site_dir, p, rep)
     print("\n".join(rep))
     return 0
 
