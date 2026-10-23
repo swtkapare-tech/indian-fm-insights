@@ -1,44 +1,44 @@
 {
-  "as_of": "2026-10-22T15:30:00+05:30",
+  "as_of": "2026-10-23T15:30:00+05:30",
   "label": "Verified close",
   "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
   "quotes": {
     "nifty": {
-      "value": 22687.65,
-      "change": -123.7,
-      "pct": -0.54,
+      "value": 22600.0,
+      "change": -87.65,
+      "pct": -0.39,
       "dp": 2
     },
     "sensex": {
-      "value": 73249.39,
-      "change": -460.3,
-      "pct": -0.62,
+      "value": 73123.83,
+      "change": -125.56,
+      "pct": -0.17,
       "dp": 2
     },
     "usdinr": {
-      "value": 94.82,
-      "change": 0.36,
-      "pct": 0.38,
+      "value": 94.93,
+      "change": 0.12,
+      "pct": 0.13,
       "dp": 2
     },
     "gold": {
-      "value": 148070,
-      "change": -180,
-      "pct": -0.12,
+      "value": 146384,
+      "change": -1686,
+      "pct": -1.14,
       "dp": 0
     },
     "silver": {
-      "value": 212891,
-      "change": -1816,
-      "pct": -0.85,
+      "value": 203651,
+      "change": -9240,
+      "pct": -4.34,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 22,687.65 (-123.70 pts, -0.54%) - Moneycontrol closing report and Telegraph India closing report, 22 Oct 2026",
-    "Sensex close 73,249.39 (-460.30 pts, -0.62%) - News18 closing report and Zee Business closing report, 22 Oct 2026",
-    "Rupee 94.82 per US dollar (weaker, vs 94.46 previous close) - PTI close via The Hindu and Deccan Herald, and Reuters close via The Economic Times, 22 Oct 2026",
-    "24K gold Rs 1,48,070 per 10 g (-Rs 180) - All India Bullion (AIB) India-wide benchmark fix and AIB benchmark history series, 22 Oct 2026",
-    "999 silver Rs 2,12,891 per kg (-Rs 1,816) - All India Bullion (AIB) India-wide benchmark fix and AIB benchmark history series, 22 Oct 2026"
+    "Nifty 50 close 22,600.00 (-87.65 pts, -0.39%) - News18 closing report and Moneycontrol closing report, 23 Oct 2026",
+    "Sensex close 73,123.83 (-125.56 pts, -0.17%) - Upstox market wrap and Zee Business closing report, 23 Oct 2026",
+    "Rupee 94.93 per US dollar (weaker, vs 94.81 previous close) - PTI close via Rediff Moneynews and CNBC quote, 23 Oct 2026",
+    "24K gold Rs 1,46,384 per 10 g (-Rs 1,686) - All India Bullion (AIB) India-wide benchmark fix and AIB benchmark history series, 23 Oct 2026",
+    "999 silver Rs 2,03,651 per kg (-Rs 9,240) - All India Bullion (AIB) India-wide benchmark fix and AIB benchmark history series, 23 Oct 2026"
   ]
 }
