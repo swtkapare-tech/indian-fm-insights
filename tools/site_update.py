@@ -85,7 +85,7 @@ def _delta(q, key, money=False):
     d = "up" if ch > 0 else ("down" if ch < 0 else "flat")
     if money:
         return ("+" if ch >= 0 else "-") + _inr(abs(ch)), d
-    return ("+" if ch >= 0 else "") + ("%g" % ch), d
+    return ("+" if ch >= 0 else "-") + ("{:,.%df}" % q.get("dp", 2)).format(abs(ch)), d
 
 
 def render_snapshot(p):
@@ -191,6 +191,70 @@ def render_markets_bullion(p):
             '        <tbody>\n%s        </tbody>\n      </table>' % rows)
 
 
+CARD_META = [
+    ("nifty", "Nifty 50", False),
+    ("sensex", "Sensex", False),
+    ("usdinr", "USD / INR", False),
+    ("gold", "Gold 24K /10g", True),
+    ("silver", "Silver /kg", True),
+]
+
+
+def render_cards(p):
+    """Index cards band: one card per quote, driven by the same payload."""
+    q = p.get("quotes") or {}
+    out = ['<div class="ifm-idxband" role="list">']
+    for key, label, money in CARD_META:
+        lvl = _num(q, key, money=money)
+        pct, d = _pct(q, key)
+        delta, _ = _delta(q, key, money=money)
+        out.append(
+            '<div class="ifm-idx %s" data-id="%s" role="listitem">'
+            '<div class="hd"><span class="nm">%s</span>'
+            '<button class="pin" type="button" aria-label="Pin %s" aria-pressed="false">\u2606</button></div>'
+            '<div class="val">%s</div>'
+            '<div class="ft"><span class="pill">%s</span><span class="abs">%s</span></div>'
+            '</div>'
+            % (d, key, _esc(label), _esc(label), lvl, pct,
+               "" if delta == "\u2014" else delta)
+        )
+    out.append("</div>")
+    return "".join(out)
+
+
+def render_snapshot_card(p):
+    """Sidebar 'Today at a glance' card, kept in step with the close."""
+    q = p.get("quotes") or {}
+    rows = [
+        ("Nifty 50", _num(q, "nifty"), _pct(q, "nifty")),
+        ("Sensex", _num(q, "sensex"), _pct(q, "sensex")),
+        ("USD / INR", _num(q, "usdinr"), _delta(q, "usdinr")),
+        ("Gold 24K /10g", _num(q, "gold", money=True), _delta(q, "gold", money=True)),
+        ("Silver /kg", _num(q, "silver", money=True), _delta(q, "silver", money=True)),
+    ]
+    body = "".join(
+        '            <tr><td class="nm">%s</td><td class="n">%s</td>'
+        '<td class="n ifm-%s">%s</td></tr>\n'
+        % (n, lvl, ch[1], ch[0]) for n, lvl, ch in rows)
+    return (
+        '<table class="ifm-table" style="margin-top:12px">\n'
+        '          <tbody>\n%s          </tbody>\n        </table>\n'
+        '        <p style="font-size:11.5px;color:var(--faint);margin:10px 0 0">'
+        'Verified close, %s. Refreshed every trading evening by Indian FM Insights\u2019 '
+        'own research pipeline.</p>' % (body, _esc(p.get("date_short")))
+    )
+
+
+def write_market_json(site, p, report):
+    """Keep data/market.json in step with the close (app.js reads it as a fallback)."""
+    d = os.path.join(site, "data")
+    if not os.path.isdir(d):
+        os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, "market.json"), "w", encoding="utf-8") as fh:
+        fh.write(render_snapshot(p) + "\n")
+    report.append("OK   data/market.json -> %s" % p.get("as_of", ""))
+
+
 def update_file(path, name, new, report):
     with open(path, encoding="utf-8") as fh:
         html = fh.read()
@@ -201,7 +265,13 @@ def update_file(path, name, new, report):
 
 
 def update_snapshots(site, p, report):
+    """Refresh the baked-in snapshot on the market pages (committed each evening).
+    Other pages stay current through data/market.json, written below."""
     snap = render_snapshot(p)
+    # The three market pages carry the snapshot that the pipeline commits each
+    # evening; every OTHER page picks up the same close at runtime from
+    # data/market.json (written below), so a lesson or calculator page can never
+    # show a stale ticker without needing to be recommitted every night.
     for page in ("index.html", "markets.html", "news.html"):
         path = os.path.join(site, page)
         if not os.path.exists(path):
@@ -211,7 +281,7 @@ def update_snapshots(site, p, report):
         new, n = re.subn(r'(<script type="application/json" id="ifm-snapshot">)(.*?)(</script>)',
                          lambda m: m.group(1) + "\n" + snap + "\n" + m.group(3),
                          html, count=1, flags=re.S)
-        if n:
+        if n and new != html:
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(new)
             report.append("OK   snapshot %s" % page)
@@ -255,6 +325,7 @@ def init_markers(site):
     """One-time: wrap the known regions with marker comments (idempotent)."""
     specs = {
         "index.html": [
+            ("CARDS", r'(<div class="ifm-sec-head"[^>]*><h2>Markets today</h2></div>\s*)(<div class="ifm-idxband".*?</div>)'),
             ("LEAD", r'(<article class="ifm-lead">)(.*?)(</article>)'),
             ("GLANCE", r'(<div class="ifm-sec-head" style="margin-top:0"><h2>At a glance</h2>'
                        r'<a class="more" href="markets.html">Full data \u2192</a></div>\s*)'
@@ -268,6 +339,8 @@ def init_markers(site):
                       r'(<table class="ifm-table">.*?</table>)'),
             ("BULLION", r'(<div class="ifm-sec-head" style="margin-top:30px"><h2>'
                         r'Currency &amp; bullion</h2></div>\s*)(<table class="ifm-table">.*?</table>)'),
+            ("CARDS", r'(<div class="ifm-sec-head"[^>]*><h2>Markets today</h2></div>\s*)(<div class="ifm-idxband".*?</div>)'),
+            ("SNAPSHOT", r'(<table class="ifm-table" style="margin-top:12px">.*?</table>\s*<p style="font-size:11.5px;[^"]*">.*?</p>)'),
         ],
     }
     for page, regions in specs.items():
@@ -306,6 +379,10 @@ def main():
     update_file(os.path.join(a.site_dir, "markets.html"), "BRIEF", render_markets_brief(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "MOVED", render_markets_moved(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "BULLION", render_markets_bullion(p), rep)
+    update_file(os.path.join(a.site_dir, "index.html"), "CARDS", render_cards(p), rep)
+    update_file(os.path.join(a.site_dir, "markets.html"), "CARDS", render_cards(p), rep)
+    update_file(os.path.join(a.site_dir, "markets.html"), "SNAPSHOT", render_snapshot_card(p), rep)
+    write_market_json(a.site_dir, p, rep)
     update_sitemap(a.site_dir, p, rep)
     update_feed(a.site_dir, p, rep)
     print("\n".join(rep))

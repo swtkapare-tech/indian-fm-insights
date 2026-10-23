@@ -211,6 +211,22 @@
     return s;
   }
 
+  /* ---------- live IST clock in the utility bar ---------- */
+  function initClock() {
+    var bar = $(".ifm-topbar .ifm-tb-l");
+    if (!bar || bar.querySelector(".ifm-clock")) return;
+    var el = document.createElement("span");
+    el.className = "ifm-clock";
+    bar.appendChild(el);
+    function tick() {
+      var t = istNow();
+      el.innerHTML = "&nbsp;\u00b7&nbsp;<b>" + ("0" + t.getHours()).slice(-2) + ":" +
+        ("0" + t.getMinutes()).slice(-2) + "</b> IST";
+    }
+    tick();
+    setInterval(tick, 20000);
+  }
+
   /* ---------- boot ----------
      Order: baked-in snapshot first (always renders something correct),
      then the live data/market.json (freshest, updated by the pipeline),
@@ -220,6 +236,7 @@
     initNav();
     initProgress();
     initYear();
+    initClock();
     paintStatus();
 
     var inline = readInline();
@@ -228,7 +245,13 @@
 
     fetch(base + "data/market.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("no snapshot")); })
-      .then(function (snap) { applySnapshot(snap); })
+      .then(function (snap) {
+        /* Guard: never let a stale data/market.json overwrite a newer close that is
+           already baked into the page. Only accept the file when it is at least as
+           fresh as the inline snapshot (ISO dates sort lexicographically). */
+        var cur = (inline && inline.as_of) || "";
+        if (snap && (!cur || String(snap.as_of || "") >= cur)) applySnapshot(snap);
+      })
       .catch(function () { /* baked-in values already shown */ })
       .then(function () { tryLive(); });
   }
