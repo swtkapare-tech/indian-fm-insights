@@ -240,8 +240,57 @@ def render_snapshot_card(p):
         '<table class="ifm-table" style="margin-top:12px">\n'
         '          <tbody>\n%s          </tbody>\n        </table>\n'
         '        <p style="font-size:11.5px;color:var(--faint);margin:10px 0 0">'
-        'Verified close, %s. Refreshed every trading evening by Indian FM Insights\u2019 '
-        'own research pipeline.</p>' % (body, _esc(p.get("date_short")))
+        'Verified close, %s. End-of-day values, not live \u2014 refreshed every trading evening and checked against two independent sources.</p>' % (body, _esc(_stamp(p)))
+    )
+
+
+
+
+def _stamp(p):
+    """'22 Oct 2026, 15:30 IST' from the payload's date + as_of time."""
+    t = p.get("as_of") or ""
+    hhmm = t[11:16] if len(t) >= 16 else ""
+    return _esc(p.get("date_short")) + ((", " + hhmm + " IST") if hhmm else "")
+
+
+def render_keypoints(p):
+    """A short, scannable summary of the day's move, above the brief body."""
+    q = p.get("quotes") or {}
+    rows = []
+    for key, label in (("nifty", "Nifty 50"), ("sensex", "Sensex")):
+        if (q.get(key) or {}).get("value") is None:
+            continue
+        rows.append("%s closed at <b>%s</b> (%s points, %s)"
+                    % (label, _num(q, key), _delta(q, key)[0], _pct(q, key)[0]))
+    if (q.get("usdinr") or {}).get("value") is not None:
+        rows.append("Rupee at <b>%s</b> per US dollar (%s)"
+                    % (_num(q, "usdinr"), _delta(q, "usdinr")[0]))
+    bits = []
+    if (q.get("gold") or {}).get("value") is not None:
+        bits.append("24K gold <b>%s</b> per 10 g (%s)"
+                    % (_num(q, "gold", money=True), _delta(q, "gold", money=True)[0]))
+    if (q.get("silver") or {}).get("value") is not None:
+        bits.append("999 silver <b>%s</b> per kg (%s)"
+                    % (_num(q, "silver", money=True), _delta(q, "silver", money=True)[0]))
+    if bits:
+        rows.append("Bullion: " + "; ".join(bits))
+    if not rows:
+        return ""
+    return '<ul class="ifm-kp">' + "".join("<li>%s</li>" % r for r in rows) + "</ul>"
+
+
+def render_sources(p):
+    """Visible sourcing + method disclosure (a Reuters/MarketWatch-style trust signal)."""
+    srcs = p.get("sources") or []
+    items = "".join("<li>%s</li>" % _esc(s) for s in srcs)
+    return (
+        '<details class="ifm-sources">'
+        '<summary>Sources &amp; method</summary>'
+        '<p class="ifm-src-stamp">As of <b>%s</b> \u2014 the end-of-day close, not a live '
+        'quote. Every figure is checked against two independent sources dated the same day; '
+        'if two sources disagree, the figure is dropped rather than estimated.</p>'
+        '<ul>%s</ul>'
+        '</details>' % (_stamp(p), items)
     )
 
 
@@ -382,6 +431,8 @@ def main():
     update_file(os.path.join(a.site_dir, "index.html"), "CARDS", render_cards(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "CARDS", render_cards(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "SNAPSHOT", render_snapshot_card(p), rep)
+    update_file(os.path.join(a.site_dir, "markets.html"), "KEYPOINTS", render_keypoints(p), rep)
+    update_file(os.path.join(a.site_dir, "markets.html"), "SOURCES", render_sources(p), rep)
     write_market_json(a.site_dir, p, rep)
     update_sitemap(a.site_dir, p, rep)
     update_feed(a.site_dir, p, rep)

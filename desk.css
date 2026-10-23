@@ -248,3 +248,32 @@ main{padding-top:0}
 .portrait dl{border-top:1px solid var(--line)!important}
 .portrait dt{color:var(--muted)!important}
 .portrait dd{color:var(--text)!important}
+
+/* ============================================================
+   v4 — scannable key points, sourcing disclosure, a11y polish
+   ============================================================ */
+.ifm-kp{list-style:none;margin:0 0 20px;padding:15px 18px;background:var(--surface);
+  border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 var(--r) var(--r) 0;
+  display:flex;flex-direction:column;gap:8px}
+.ifm-kp li{position:relative;padding-left:17px;font-size:14.5px;color:var(--text-soft);line-height:1.55}
+.ifm-kp li::before{content:"";position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.ifm-kp b{color:var(--text)}
+
+.ifm-sources{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:0 18px}
+.ifm-sources summary{cursor:pointer;padding:15px 0;font-weight:600;color:var(--text);font-size:14.5px}
+.ifm-sources summary:hover{color:var(--gold)}
+.ifm-sources p,.ifm-sources li{font-size:12.5px;color:var(--muted);line-height:1.7}
+.ifm-sources ul{margin:0 0 16px;padding-left:18px;display:flex;flex-direction:column;gap:7px}
+.ifm-src-stamp{margin:0 0 12px;color:var(--text-soft)!important}
+.ifm-src-stamp b{color:var(--text)}
+
+/* keyboard focus must always be visible (WCAG 2.4.7) */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* honour reduced-motion for the interface chrome */
+@media (prefers-reduced-motion: reduce){
+  .ifm-card,.ifm-idx{transition:none}
+  .ifm-card:hover,.ifm-idx:hover{transform:none}
+  .ifm-prog{transition:none}
+}
