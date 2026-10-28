@@ -1,45 +1,44 @@
 {
-  "as_of": "2026-10-27T15:30:00+05:30",
+  "as_of": "2026-10-28T15:30:00+05:30",
   "label": "Verified close",
   "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
   "quotes": {
     "nifty": {
-      "value": 22749.75,
-      "change": -3.45,
-      "pct": -0.02,
+      "value": 22698.85,
+      "change": -50.9,
+      "pct": -0.22,
       "dp": 2
     },
     "sensex": {
-      "value": 73598.67,
-      "change": -8.08,
-      "pct": -0.01,
+      "value": 73246.03,
+      "change": -352.64,
+      "pct": -0.48,
       "dp": 2
     },
     "usdinr": {
-      "value": 95.12,
+      "value": null,
       "change": null,
       "pct": null,
       "dp": 2
     },
     "gold": {
-      "value": 141082,
-      "change": -628,
-      "pct": -0.44,
+      "value": 142300,
+      "change": 869,
+      "pct": 0.61,
       "dp": 0
     },
     "silver": {
-      "value": 192037,
-      "change": -2442,
-      "pct": -1.26,
+      "value": 194000,
+      "change": 1501,
+      "pct": 0.78,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 22,749.75 (-3.45, -0.02%) - The Hindu BusinessLine, Business Standard, 27 Oct 2026",
-    "Sensex close 73,598.67 (-8.08, -0.01%) - ET Now, Upstox, 27 Oct 2026",
-    "USD/INR close 95.12 - PTI via The Hindu BusinessLine, Moneycontrol, 27 Oct 2026",
-    "Gold 999 \u20b91,41,082 per 10 g - IBJA daily rates (ibjarates.com), Upstox (citing IBJA), 27 Oct 2026",
-    "Silver 999 \u20b91,92,037 per kg (-2,442) - IBJA daily rates (ibjarates.com), Upstox (citing IBJA), 27 Oct 2026",
-    "Method note: bullion levels are IBJA's 999 rates for 27 Oct 2026 (AM fix); the PM closing fix was not published when this brief was built. Gold 22K is derived from the 24K rate at 916 fineness. The rupee's day-on-day change is not shown because sources reported different Monday base closes; the closing level itself was confirmed by two independent sources."
+    "Nifty 50 close 22,698.85 (-50.90, -0.22%) \u2014 Moneycontrol and Business Standard, 28 Oct 2026",
+    "Sensex close 73,246.03 (-352.64, -0.48%) \u2014 The Hindu BusinessLine and India Today, 28 Oct 2026",
+    "Gold 24K (999 purity, per 10 g) \u20b91,42,300 \u2014 IBJA (ibjarates.com) and Divya Bhaskar, 28 Oct 2026",
+    "Silver 999 (per kg) \u20b91,94,000 \u2014 IBJA (ibjarates.com) and Divya Bhaskar, 28 Oct 2026",
+    "USD / INR \u2014 withheld for 28 Oct 2026: published closing prints conflicted (PTI provisional 95.28 vs Reuters 95.22) and could not be verified against two agreeing independent sources"
   ]
 }
