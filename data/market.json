@@ -1,7 +1,9 @@
 {
   "as_of": "2026-10-30T15:30:00+05:30",
-  "label": "Verified close",
-  "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
+  "session_date": "2026-10-30",
+  "label": "Last verified close \u2014 Friday, 30 Oct 2026",
+  "note": "Indian markets were closed on Saturday, 31 October 2026, so there was no new close today. These are Friday 30 October 2026's verified closing levels. Every figure is checked against two independent sources. The next session is Monday, 2 November 2026.",
+  "market_status": "closed_weekend",
   "quotes": {
     "nifty": {
       "value": 23053.1,
@@ -35,10 +37,10 @@
     }
   },
   "sources": [
-    "Nifty 50 close 23,053.10 (+116.35, +0.51%) - Business Standard and The Hindu BusinessLine, 30 Oct 2026",
-    "Sensex close 74,459.53 (+308.49, +0.42%) - India Today and ET Now, 30 Oct 2026",
-    "USD / INR 94.93, rupee up 33 paise from 95.26 - PTI reports carried by The Hindu BusinessLine and Deccan Herald, 30 Oct 2026",
-    "Gold 24K 999 (per 10 g) \u20b91,40,891, down \u20b91,364 from \u20b91,42,255 - IBJA rates reported by ABP Live (Marathi) and Democratic Bharat Live, 30 Oct 2026",
-    "Silver 999 (per kg) \u20b91,83,800, down \u20b96,678 from \u20b91,90,478 - IBJA rates reported by ABP Live (Marathi) and Divya Bhaskar, 30 Oct 2026"
+    "Nifty 50 close 23,053.10 (+116.35, +0.51%) - NSE official index close file for 30 Oct 2026 (ind_close_all_30102026.csv) and The Hindu BusinessLine, 30 Oct 2026",
+    "Sensex close 74,459.53 (+308.49, +0.42%) - India Today and Business Standard, 30 Oct 2026",
+    "USD / INR 94.93, rupee up 33 paise from 95.26 - PTI report carried by The Hindu BusinessLine and The Times of India, 30 Oct 2026; the RBI/FBIL reference rate for the same session was 95.2492 (MSEI RBI reference-rate archive)",
+    "Gold 24K 999 (per 10 g) Rs 1,40,891, down 1,364 from 1,42,255 - IBJA morning benchmark reported by Democratic Bharat Live and The United Indian, 30 Oct 2026",
+    "Silver 999 (per kg) Rs 1,83,800, down 6,678 from 1,90,478 - IBJA morning benchmark reported by Democratic Bharat Live and The United Indian, 30 Oct 2026"
   ]
 }
