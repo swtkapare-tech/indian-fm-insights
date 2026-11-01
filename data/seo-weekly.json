@@ -1,7 +1,36 @@
 {
-  "week_ending": "2026-10-31",
+  "week_ending": "2026-11-01",
   "property": "https://indianfminsights.site/",
-  "window": "2026-10-03 to 2026-10-31",
+  "window": "2026-10-04 to 2026-10-31",
   "striking_distance": [],
-  "note": "Search Console returned zero query rows for the property over the last 28 days, so there are no impressions and no striking-distance keywords to file this week. The sitemap was resubmitted on 31 Oct 2026 and three priority lesson pages were inspected: what-is-sip.html and nifty-sensex-explained.html were 'URL is unknown to Google', how-to-buy-gold.html was 'Discovered - currently not indexed'. Google Analytics returns no account and no property, so there is no session data."
+  "note": "Search Console returned zero query rows for the property over the last 28 days (04-31 Oct 2026), so the site is still earning no impressions and there are no striking-distance keywords to file this week. The sitemap was resubmitted on 1 Nov 2026; Search Console reports 45 URLs submitted, 0 indexed, 0 errors, last downloaded 31 Oct 2026. Three priority lesson pages were inspected: what-is-sip.html is now 'Submitted and indexed' (it was 'URL is unknown to Google' a week ago), while nifty-sensex-explained.html and how-to-buy-gold.html remain 'Discovered - currently not indexed'. Google Analytics returns no account and no property, so there is no session data; this is a when-available input and does not block the brief.",
+  "sitemap": {
+    "path": "https://indianfminsights.site/sitemap.xml",
+    "submitted": 45,
+    "indexed": 0,
+    "errors": 0,
+    "last_submitted": "2026-11-01",
+    "last_downloaded": "2026-10-31"
+  },
+  "inspections": [
+    {
+      "url": "https://indianfminsights.site/articles/what-is-sip.html",
+      "coverage_state": "Submitted and indexed",
+      "verdict": "PASS"
+    },
+    {
+      "url": "https://indianfminsights.site/articles/nifty-sensex-explained.html",
+      "coverage_state": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "url": "https://indianfminsights.site/articles/how-to-buy-gold.html",
+      "coverage_state": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL"
+    }
+  ],
+  "analytics": {
+    "status": "no_property",
+    "note": "No Google Analytics account or property is available for the site."
+  }
 }
