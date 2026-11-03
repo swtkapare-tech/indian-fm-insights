@@ -1,44 +1,44 @@
 {
-  "as_of": "2026-11-02T15:30:00+05:30",
+  "as_of": "2026-11-03T15:30:00+05:30",
   "label": "Verified close",
   "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
   "quotes": {
     "nifty": {
-      "value": 23440.8,
-      "change": 387.7,
-      "pct": 1.68,
+      "value": 23810.85,
+      "change": 370.05,
+      "pct": 1.58,
       "dp": 2
     },
     "sensex": {
-      "value": 75692.78,
-      "change": 1233.25,
-      "pct": 1.66,
+      "value": 76917.85,
+      "change": 1225.07,
+      "pct": 1.62,
       "dp": 2
     },
     "usdinr": {
-      "value": 94.9,
-      "change": -0.05,
-      "pct": -0.05,
+      "value": 94.7,
+      "change": -0.2,
+      "pct": -0.21,
       "dp": 2
     },
     "gold": {
-      "value": 137770,
-      "change": -2280,
-      "pct": -1.63,
+      "value": 138118,
+      "change": 348,
+      "pct": 0.25,
       "dp": 0
     },
     "silver": {
-      "value": 180080,
-      "change": -1264,
-      "pct": -0.7,
+      "value": 177300,
+      "change": -2780,
+      "pct": -1.54,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 23,440.80 (+387.70, +1.68%) - NSE official index data for 2 Nov 2026 and Business Standard, 2 Nov 2026",
-    "Sensex close 75,692.78 (+1,233.25, +1.66%) - Business Standard and The Times of India, 2 Nov 2026",
-    "USD / INR 94.90, rupee up 5 paise from 94.95 - Moneycontrol closing report and the PTI report carried by The Hindu BusinessLine, 2 Nov 2026",
-    "Gold 24K 999 (per 10 g) Rs 1,37,770, down 2,280 from 1,40,050 - IBJA benchmark for 2 Nov 2026 as published by The Economic Times and Goodreturns",
-    "Silver 999 (per kg) Rs 1,80,080, down 1,264 from 1,81,344 - IBJA benchmark for 2 Nov 2026 as published by The Economic Times and Goodreturns"
+    "Nifty 50 close 23,810.85 (+370.05, +1.58%) - NSE official index data for 3 Nov 2026 as reported by Moneycontrol and The Hindu BusinessLine, 3 Nov 2026",
+    "Sensex close 76,917.85 (+1,225.07, +1.62%) - Moneycontrol and The Hindu BusinessLine closing reports, 3 Nov 2026",
+    "USD / INR 94.70, rupee up 20 paise from Monday's 94.90 - Twelve Data and EODData end-of-day USD/INR closes for 3 Nov 2026; PTI's provisional print the same day was 94.71",
+    "Gold 24K 999 (per 10 g) Rs 1,38,118, up 348 from 1,37,770 - IBJA morning benchmark for 3 Nov 2026 as published by ibjarates.com and Dainik Bhaskar",
+    "Silver 999 (per kg) Rs 1,77,300, down 2,780 from 1,80,080 - IBJA morning benchmark for 3 Nov 2026 as published by ibjarates.com and The Economic Times"
   ]
 }

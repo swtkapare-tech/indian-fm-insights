@@ -1,31 +1,61 @@
 {
   "week_ending": "2026-11-08",
   "property": "https://indianfminsights.site/",
-  "window": "2026-10-05 to 2026-11-01",
+  "window": "2026-10-06 to 2026-11-02",
+  "first_rows_date": "2026-11-03",
   "striking_distance": [],
-  "note": "Search Console returned zero query rows for the property over the 28 days to 1 Nov 2026, so the site is still earning no impressions and there are no striking-distance keywords to file this week. The sitemap was resubmitted on 2 Nov 2026; Search Console still reports 45 URLs submitted, 0 indexed, 0 errors, last downloaded 1 Nov 2026. Three priority lesson pages were inspected: what-is-sip.html remains 'Submitted and indexed' (last crawled 31 Oct 2026); how-to-buy-gold.html is 'Discovered - currently not indexed'; nifty-sensex-explained.html has slipped back to 'URL is unknown to Google' from 'Discovered - currently not indexed' a week ago, which is the one page to watch. Google Analytics returns no account and no property, so there is no session data; this is a when-available input and does not block the brief.",
+  "queries": [
+    {
+      "query": "public issue of shares",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 67.75,
+      "band": "far - beyond position 50"
+    },
+    {
+      "query": "ipo in share market",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 46.0,
+      "band": "far - beyond position 50"
+    },
+    {
+      "query": "xirr vs cagr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 88.0,
+      "band": "far - beyond position 50"
+    }
+  ],
+  "note": "Search Console returned three query rows for the property over the 28 days to 2 Nov 2026 - the FIRST week the property has returned any rows at all, so the demand loop switches on from this date. Total: 6 impressions, 0 clicks. None of the three queries sits in the striking-distance band (position 5-20): the best is 'ipo in share market' at position 46, so there is no striking-distance keyword to file this week. The phrase to watch is 'public issue of shares' (4 of the 6 impressions). The sitemap was resubmitted on 3 Nov 2026; Search Console still reports 45 URLs submitted, 0 indexed, 0 errors. Three priority lesson pages were inspected on 3 Nov 2026: what-is-sip.html is still 'Submitted and indexed' (last crawled 31 Oct 2026); nifty-sensex-explained.html has moved UP from 'URL is unknown to Google' a week ago to 'Discovered - currently not indexed', which is the first positive movement on that page; how-to-buy-gold.html is unchanged at 'Discovered - currently not indexed'. Google Analytics returns no account and no property, so there is no session data; this is a when-available input and does not block the brief.",
   "sitemap": {
     "path": "https://indianfminsights.site/sitemap.xml",
     "submitted": 45,
     "indexed": 0,
     "errors": 0,
-    "last_submitted": "2026-11-02",
-    "last_downloaded": "2026-11-01"
+    "last_submitted": "2026-11-03",
+    "last_downloaded": "2026-11-02"
   },
   "inspections": [
     {
       "url": "https://indianfminsights.site/articles/what-is-sip.html",
       "coverage_state": "Submitted and indexed",
+      "last_crawled": "2026-10-31",
       "verdict": "PASS"
     },
     {
       "url": "https://indianfminsights.site/articles/nifty-sensex-explained.html",
-      "coverage_state": "URL is unknown to Google",
-      "verdict": "WATCH"
+      "coverage_state": "Discovered - currently not indexed",
+      "last_crawled": null,
+      "verdict": "NEUTRAL"
     },
     {
       "url": "https://indianfminsights.site/articles/how-to-buy-gold.html",
       "coverage_state": "Discovered - currently not indexed",
+      "last_crawled": null,
       "verdict": "NEUTRAL"
     }
   ],
