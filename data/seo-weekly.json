@@ -1,43 +1,67 @@
 {
   "week_ending": "2026-11-08",
   "property": "https://indianfminsights.site/",
-  "window": "2026-10-06 to 2026-11-02",
+  "window": "2026-10-09 to 2026-11-05",
   "first_rows_date": "2026-11-03",
   "striking_distance": [],
   "queries": [
     {
       "query": "public issue of shares",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0.0,
-      "position": 67.75,
+      "position": 67.4,
       "band": "far - beyond position 50"
     },
     {
       "query": "ipo in share market",
       "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 36.67,
+      "band": "far - beyond position 30"
+    },
+    {
+      "query": "what is ipo in india",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 49.5,
+      "band": "far - beyond position 30"
+    },
+    {
+      "query": "what is ipo in share market",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0.0,
-      "position": 46.0,
+      "position": 45.0,
+      "band": "far - beyond position 30"
+    },
+    {
+      "query": "what is xirr and cagr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 75.0,
       "band": "far - beyond position 50"
     },
     {
       "query": "xirr vs cagr",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0.0,
-      "position": 88.0,
+      "position": 80.0,
       "band": "far - beyond position 50"
     }
   ],
-  "note": "Search Console returned three query rows for the property over the 28 days to 2 Nov 2026 - the FIRST week the property has returned any rows at all, so the demand loop switches on from this date. Total: 6 impressions, 0 clicks. None of the three queries sits in the striking-distance band (position 5-20): the best is 'ipo in share market' at position 46, so there is no striking-distance keyword to file this week. The phrase to watch is 'public issue of shares' (4 of the 6 impressions). The sitemap was resubmitted on 3 Nov 2026; Search Console still reports 45 URLs submitted, 0 indexed, 0 errors. Three priority lesson pages were inspected on 3 Nov 2026: what-is-sip.html is still 'Submitted and indexed' (last crawled 31 Oct 2026); nifty-sensex-explained.html has moved UP from 'URL is unknown to Google' a week ago to 'Discovered - currently not indexed', which is the first positive movement on that page; how-to-buy-gold.html is unchanged at 'Discovered - currently not indexed'. Google Analytics returns no account and no property, so there is no session data; this is a when-available input and does not block the brief.",
+  "note": "Search Console returned six query rows for the property over the 28 days to 5 Nov 2026 - 15 impressions, 0 clicks. None of the six sits in the striking-distance band (position 5-20): the best is 'ipo in share market' at position 36.7, and every row is beyond position 30, so there is no striking-distance keyword to file this week. The demand signal is IPO education: four of the six queries ask what an IPO is or what a public issue of shares is, and together they account for 11 of the 15 impressions. The sitemap was resubmitted on 5 Nov 2026; Search Console reports 45 URLs submitted, 0 indexed, 0 errors, last downloaded 4 Nov 2026. Three priority lesson pages were inspected on 5 Nov 2026: what-is-sip.html is 'Submitted and indexed' (last crawled 31 Oct 2026); how-to-buy-gold.html is unchanged at 'Discovered - currently not indexed'; nifty-sensex-explained.html has moved BACK from 'Discovered - currently not indexed' to 'URL is unknown to Google', so that page needs an internal link from a crawled page before it is re-inspected. Google Analytics returns no account and no property, so there is no session data; this is a when-available input and does not block the brief.",
   "sitemap": {
     "path": "https://indianfminsights.site/sitemap.xml",
     "submitted": 45,
     "indexed": 0,
     "errors": 0,
-    "last_submitted": "2026-11-03",
-    "last_downloaded": "2026-11-02"
+    "last_submitted": "2026-11-05",
+    "last_downloaded": "2026-11-04"
   },
   "inspections": [
     {
@@ -48,7 +72,7 @@
     },
     {
       "url": "https://indianfminsights.site/articles/nifty-sensex-explained.html",
-      "coverage_state": "Discovered - currently not indexed",
+      "coverage_state": "URL is unknown to Google",
       "last_crawled": null,
       "verdict": "NEUTRAL"
     },
