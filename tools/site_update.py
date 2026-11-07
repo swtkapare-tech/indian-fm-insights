@@ -100,21 +100,21 @@ def render_snapshot(p):
 def render_index_lead(p):
     b = p.get("brief") or {}
     q = p.get("quotes") or {}
-    npct, _ = _pct(q, "nifty")
-    spct, _ = _pct(q, "sensex")
+    npct, ndir = _pct(q, "nifty")
+    spct, sdir = _pct(q, "sensex")
     return (
         '<span class="ifm-tag">Market brief \u00b7 %s</span>\n'
         '      <h1>%s</h1>\n'
         '      <p class="dek">%s</p>\n'
         '      <div class="ifm-lead-meta">\n'
-        '        <span>Nifty 50 <b style="color:var(--text)">%s</b> <span class="ifm-down">%s</span></span>\n'
-        '        <span>Sensex <b style="color:var(--text)">%s</b> <span class="ifm-down">%s</span></span>\n'
+        '        <span>Nifty 50 <b style="color:var(--text)">%s</b> <span class="ifm-%s">%s</span></span>\n'
+        '        <span>Sensex <b style="color:var(--text)">%s</b> <span class="ifm-%s">%s</span></span>\n'
         '        <span>Rupee <b style="color:var(--text)">%s</b></span>\n'
         '      </div>\n'
         '      <p style="margin:18px 0 0"><a class="btn primary" href="markets.html">'
         'Read the full market brief <span class="arr">\u2192</span></a></p>'
         % (_esc(p.get("date_short")), _esc(b.get("headline")), _esc(b.get("dek")),
-           _num(q, "nifty"), npct, _num(q, "sensex"), spct, _num(q, "usdinr"))
+           _num(q, "nifty"), ndir, npct, _num(q, "sensex"), sdir, spct, _num(q, "usdinr"))
     )
 
 
