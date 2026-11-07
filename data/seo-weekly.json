@@ -1,9 +1,25 @@
 {
   "week_ending": "2026-11-08",
   "property": "https://indianfminsights.site/",
-  "window": "2026-10-09 to 2026-11-05",
+  "window": "2026-10-10 to 2026-11-06",
   "first_rows_date": "2026-11-03",
   "striking_distance": [],
+  "page_striking_distance": [
+    {
+      "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
+      "impressions": 1,
+      "position": 6.0,
+      "band": "striking distance - page 1, position 5-20",
+      "note": "One impression only, so treat as a lead rather than a trend: the first page of this site to sit inside the top ten."
+    },
+    {
+      "page": "https://indianfminsights.site/",
+      "impressions": 3,
+      "position": 6.67,
+      "band": "striking distance - page 1, position 5-20",
+      "note": "The homepage is ranking on brand-adjacent queries; the brief page it links to is the natural next click."
+    }
+  ],
   "queries": [
     {
       "query": "public issue of shares",
@@ -54,33 +70,33 @@
       "band": "far - beyond position 50"
     }
   ],
-  "note": "Search Console returned six query rows for the property over the 28 days to 5 Nov 2026 - 15 impressions, 0 clicks. None of the six sits in the striking-distance band (position 5-20): the best is 'ipo in share market' at position 36.7, and every row is beyond position 30, so there is no striking-distance keyword to file this week. The demand signal is IPO education: four of the six queries ask what an IPO is or what a public issue of shares is, and together they account for 11 of the 15 impressions. The sitemap was resubmitted on 5 Nov 2026; Search Console reports 45 URLs submitted, 0 indexed, 0 errors, last downloaded 4 Nov 2026. Three priority lesson pages were inspected on 5 Nov 2026: what-is-sip.html is 'Submitted and indexed' (last crawled 31 Oct 2026); how-to-buy-gold.html is unchanged at 'Discovered - currently not indexed'; nifty-sensex-explained.html has moved BACK from 'Discovered - currently not indexed' to 'URL is unknown to Google', so that page needs an internal link from a crawled page before it is re-inspected. Google Analytics returns no account and no property, so there is no session data; this is a when-available input and does not block the brief.",
+  "note": "Search Console returned the same six query rows over the 28 days to 6 Nov 2026 - 15 impressions, 0 clicks - so the week brought no new query and no click. None of the six sits in the query-level striking-distance band (position 5-20): the best is 'ipo in share market' at position 36.7 and every row is beyond position 30, so there is no striking-distance keyword to file again this week. Page-level data is the more useful signal now: the site earned impressions on four URLs, and two of them are inside the top ten - articles/why-gold-prices-move.html at position 6.0 (1 impression) and the homepage at position 6.67 (3 impressions). Those are recorded as page-level striking distance because they are the first pages close enough to page one for a title and internal-link change to matter. The demand signal is still IPO education: four of the six queries ask what an IPO is or what a public issue of shares is, and together they account for 11 of the 15 impressions, with what-is-ipo.html the page collecting 11 of the 19 page impressions. The sitemap was resubmitted on 7 Nov 2026; Search Console reports 45 URLs submitted, 0 indexed, 0 errors, last downloaded 6 Nov 2026. Three priority lesson pages were inspected on 7 Nov 2026 and all three now PASS as 'Submitted and indexed' with a successful fetch, INDEXING_ALLOWED and robots.txt ALLOWED, all last crawled 31 Oct 2026: what-is-ipo.html, xirr-vs-cagr.html and why-gold-prices-move.html. Google Analytics still returns no account and no property, so there is no session data; it is a when-available input and did not block the brief.",
   "sitemap": {
     "path": "https://indianfminsights.site/sitemap.xml",
     "submitted": 45,
     "indexed": 0,
     "errors": 0,
-    "last_submitted": "2026-11-05",
-    "last_downloaded": "2026-11-04"
+    "last_submitted": "2026-11-07",
+    "last_downloaded": "2026-11-06"
   },
   "inspections": [
     {
-      "url": "https://indianfminsights.site/articles/what-is-sip.html",
+      "url": "https://indianfminsights.site/articles/what-is-ipo.html",
       "coverage_state": "Submitted and indexed",
       "last_crawled": "2026-10-31",
       "verdict": "PASS"
     },
     {
-      "url": "https://indianfminsights.site/articles/nifty-sensex-explained.html",
-      "coverage_state": "URL is unknown to Google",
-      "last_crawled": null,
-      "verdict": "NEUTRAL"
+      "url": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
+      "coverage_state": "Submitted and indexed",
+      "last_crawled": "2026-10-31",
+      "verdict": "PASS"
     },
     {
-      "url": "https://indianfminsights.site/articles/how-to-buy-gold.html",
-      "coverage_state": "Discovered - currently not indexed",
-      "last_crawled": null,
-      "verdict": "NEUTRAL"
+      "url": "https://indianfminsights.site/articles/why-gold-prices-move.html",
+      "coverage_state": "Submitted and indexed",
+      "last_crawled": "2026-10-31",
+      "verdict": "PASS"
     }
   ],
   "analytics": {
