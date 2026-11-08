@@ -1,7 +1,7 @@
 {
   "as_of": "2026-11-06T15:30:00+05:30",
   "label": "Verified close",
-  "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
+  "note": "Markets were shut on Sunday 8 Nov 2026 for Diwali Laxmi Pujan, so these are the last verified session's levels - the close of Friday 6 Nov 2026. Refreshed by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
   "quotes": {
     "nifty": {
       "value": 25030.35,
@@ -39,6 +39,14 @@
     "Index detail (Nifty Private Bank +3.22%, Nifty Bank +2.27%, Nifty Midcap 150 -0.09%, Nifty Smallcap 250 -0.85%, India VIX 17.66, +13.35%) - NSE data in Capital Market's closing report, 06 Nov 2026; India Today reports the same 13.35% VIX move",
     "USD / INR 93.91, up 56 paise from 94.47 - Moneycontrol and Business Standard closing reports, 06 Nov 2026; IANS and The Hindu report 93.88-93.89 on a provisional basis, so the 93.91 close is the one used here",
     "Gold 24K 999 (per 10 g) Rs 1,41,452, down 2,677 from 1,44,129 - IBJA PM benchmark for 6 Nov 2026 as published on ibjarates.com; Inshorts and Dainik Jagran report the same Rs 1,41,452 and the same -2,677 move",
-    "Silver 999 (per kg) Rs 1,82,868, down 4,432 from 1,87,300 - IBJA PM benchmark for 6 Nov 2026 as published on ibjarates.com; Inshorts and Dainik Jagran report the same Rs 1,82,868 and the same -4,432 move"
-  ]
+    "Silver 999 (per kg) Rs 1,82,868, down 4,432 from 1,87,300 - IBJA PM benchmark for 6 Nov 2026 as published on ibjarates.com; Inshorts and Dainik Jagran report the same Rs 1,82,868 and the same -4,432 move",
+    "Re-verified on 8 Nov 2026 against the NSE official index close file for 06-11-2026 (ind_close_all_06112026.csv: Nifty 50 close 25,030.35, +493.75, +2.01%) and IBJA's published daily opening and closing rate sheet for 06-11-2026 (24K 999 gold Rs 1,41,452 per 10 g, silver 999 Rs 1,82,868 per kg); no session has traded since, so the five levels are unchanged."
+  ],
+  "session": {
+    "date": "2026-11-06",
+    "label": "Friday 6 November 2026",
+    "status": "carried forward - no session today",
+    "reason": "Sunday 8 November 2026: weekend, Diwali Laxmi Pujan market holiday"
+  },
+  "updated": "2026-11-08T16:30:00+05:30"
 }
