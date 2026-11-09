@@ -1,52 +1,50 @@
 {
-  "as_of": "2026-11-06T15:30:00+05:30",
+  "as_of": "2026-11-09T15:30:00+05:30",
   "label": "Verified close",
-  "note": "Markets were shut on Sunday 8 Nov 2026 for Diwali Laxmi Pujan, so these are the last verified session's levels - the close of Friday 6 Nov 2026. Refreshed by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
+  "note": "Monday 9 November 2026 was a full trading session, so these are today's closing levels. Refreshed by Indian FM Insights' own research pipeline, with every figure checked against two independent sources. Gold and silver are shown as pending: IBJA had not published its 9 November benchmark when this page refreshed.",
+  "session": {
+    "date": "2026-11-09",
+    "label": "Monday 9 November 2026",
+    "status": "trading session closed today",
+    "reason": "Regular session, 09:15-15:30 IST"
+  },
+  "updated": "2026-11-09T16:30:00+05:30",
   "quotes": {
     "nifty": {
-      "value": 25030.35,
-      "change": 493.75,
-      "pct": 2.01,
+      "value": 25044.65,
+      "change": 58.25,
+      "pct": 0.23,
       "dp": 2
     },
     "sensex": {
-      "value": 81028.02,
-      "change": 1718.01,
-      "pct": 2.17,
+      "value": 81106.65,
+      "change": 107.25,
+      "pct": 0.13,
       "dp": 2
     },
     "usdinr": {
-      "value": 93.91,
-      "change": -0.56,
-      "pct": -0.59,
+      "value": 93.93,
+      "change": 0.02,
+      "pct": 0.02,
       "dp": 2
     },
     "gold": {
-      "value": 141452,
-      "change": -2677,
-      "pct": -1.86,
+      "value": null,
+      "change": null,
+      "pct": null,
       "dp": 0
     },
     "silver": {
-      "value": 182868,
-      "change": -4432,
-      "pct": -2.37,
+      "value": null,
+      "change": null,
+      "pct": null,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 25,030.35 (+493.75, +2.01%) and Sensex close 81,028.02 (+1,718.01, +2.17%) - NSE and BSE closing data for 6 Nov 2026 as reported by Capital Market (16:09 IST, 06 Nov 2026), India Today (15:57 IST, 06 Nov 2026), The Hindu BusinessLine (06 Nov 2026) and Business Standard (06 Nov 2026)",
-    "Index detail (Nifty Private Bank +3.22%, Nifty Bank +2.27%, Nifty Midcap 150 -0.09%, Nifty Smallcap 250 -0.85%, India VIX 17.66, +13.35%) - NSE data in Capital Market's closing report, 06 Nov 2026; India Today reports the same 13.35% VIX move",
-    "USD / INR 93.91, up 56 paise from 94.47 - Moneycontrol and Business Standard closing reports, 06 Nov 2026; IANS and The Hindu report 93.88-93.89 on a provisional basis, so the 93.91 close is the one used here",
-    "Gold 24K 999 (per 10 g) Rs 1,41,452, down 2,677 from 1,44,129 - IBJA PM benchmark for 6 Nov 2026 as published on ibjarates.com; Inshorts and Dainik Jagran report the same Rs 1,41,452 and the same -2,677 move",
-    "Silver 999 (per kg) Rs 1,82,868, down 4,432 from 1,87,300 - IBJA PM benchmark for 6 Nov 2026 as published on ibjarates.com; Inshorts and Dainik Jagran report the same Rs 1,82,868 and the same -4,432 move",
-    "Re-verified on 8 Nov 2026 against the NSE official index close file for 06-11-2026 (ind_close_all_06112026.csv: Nifty 50 close 25,030.35, +493.75, +2.01%) and IBJA's published daily opening and closing rate sheet for 06-11-2026 (24K 999 gold Rs 1,41,452 per 10 g, silver 999 Rs 1,82,868 per kg); no session has traded since, so the five levels are unchanged."
-  ],
-  "session": {
-    "date": "2026-11-06",
-    "label": "Friday 6 November 2026",
-    "status": "carried forward - no session today",
-    "reason": "Sunday 8 November 2026: weekend, Diwali Laxmi Pujan market holiday"
-  },
-  "updated": "2026-11-08T16:30:00+05:30"
+    "Nifty 50 close 25,044.65 (+58.25, +0.23%) and Sensex close 81,106.65 (+107.25, +0.13%) - NSE and BSE closing data for 9 Nov 2026 as reported by The Hindu BusinessLine (16:14 IST, 09 Nov 2026), Business Standard, Moneycontrol (15:44 IST), PTI and Upstox (15:56 IST)",
+    "Session shape (Nifty intraday low 24,838.75 and high 25,084.05; Sensex low 80,519.31 and high 81,339.41) - Upstox market wrap for 09 Nov 2026 and PTI's closing report, 09 Nov 2026",
+    "USD / INR 93.93 (93.9275) - Reuters closing report for 9 Nov 2026, published by The Hindu BusinessLine (15:59 IST) and Business Recorder, and PTI's provisional close of 93.93; Moneycontrol puts Friday's close at 93.91, which is the base used for the change shown here",
+    "Gold 24K 999 (per 10 g) and silver 999 (per kg) - not published for 9 Nov 2026 when this page refreshed: ibjarates.com carried 'Rates will be uploaded soon' with its last published fixing on 6 Nov 2026 (24K 999 Rs 1,41,452 per 10 g; silver 999 Rs 1,82,868 per kg). Neither figure is carried forward as today's level."
+  ]
 }
