@@ -1,0 +1,61 @@
+{
+  "property": "https://indianfminsights.site/",
+  "window": {
+    "start": "2026-10-12",
+    "end": "2026-11-08",
+    "days": 28
+  },
+  "pulled": "2026-11-09T16:30:00+05:30",
+  "source": "Google Search Console, searchAnalytics by query",
+  "totals": {
+    "impressions": 24,
+    "clicks": 0
+  },
+  "striking_distance_5_to_20": [],
+  "any_impression": [
+    {
+      "query": "public issue of shares",
+      "impressions": 8,
+      "clicks": 0,
+      "position": 67.0
+    },
+    {
+      "query": "ipo in share market",
+      "impressions": 4,
+      "clicks": 0,
+      "position": 39.0
+    },
+    {
+      "query": "what is ipo in india",
+      "impressions": 4,
+      "clicks": 0,
+      "position": 47.5
+    },
+    {
+      "query": "what is ipo in share market",
+      "impressions": 3,
+      "clicks": 0,
+      "position": 57.0
+    },
+    {
+      "query": "xirr vs cagr",
+      "impressions": 3,
+      "clicks": 0,
+      "position": 80.0
+    },
+    {
+      "query": "what is xirr and cagr",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 75.0
+    },
+    {
+      "query": "what is ipo",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 83.0
+    }
+  ],
+  "ga": "no GA4 property connected - sessions unavailable",
+  "note": "First week this property returned any Search Console rows; the demand loop switches on from this date (2026-11-09). No query yet sits in the striking-distance band (average position 5-20), so the list filed here is every query with at least one impression, all of them at position 39 or worse. Sitemap resubmitted and the priority lesson pages inspected this run; all three inspected URLs report 'Discovered - currently not indexed'."
+}
