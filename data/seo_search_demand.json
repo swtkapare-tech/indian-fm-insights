@@ -1,15 +1,16 @@
 {
   "property": "https://indianfminsights.site/",
   "window": {
-    "start": "2026-10-12",
-    "end": "2026-11-08",
+    "start": "2026-10-13",
+    "end": "2026-11-09",
     "days": 28
   },
-  "pulled": "2026-11-09T16:30:00+05:30",
-  "source": "Google Search Console, searchAnalytics by query",
+  "pulled": "2026-11-10T16:30:00+05:30",
+  "source": "Google Search Console, searchAnalytics by query and by page",
   "totals": {
-    "impressions": 24,
-    "clicks": 0
+    "impressions_sum_of_returned_query_rows": 25,
+    "clicks": 0,
+    "note": "Query rows exclude anonymised queries, so the row sum can be below the property's true impression count; page rows are shown separately and are not additive with query rows."
   },
   "striking_distance_5_to_20": [],
   "any_impression": [
@@ -17,45 +18,95 @@
       "query": "public issue of shares",
       "impressions": 8,
       "clicks": 0,
-      "position": 67.0
+      "position": 67.0,
+      "band": "far - beyond position 50"
+    },
+    {
+      "query": "what is ipo in india",
+      "impressions": 5,
+      "clicks": 0,
+      "position": 45.6,
+      "band": "page 2-5 - visible but far from page 1"
     },
     {
       "query": "ipo in share market",
       "impressions": 4,
       "clicks": 0,
-      "position": 39.0
-    },
-    {
-      "query": "what is ipo in india",
-      "impressions": 4,
-      "clicks": 0,
-      "position": 47.5
+      "position": 39.0,
+      "band": "page 2-5 - visible but far from page 1"
     },
     {
       "query": "what is ipo in share market",
       "impressions": 3,
       "clicks": 0,
-      "position": 57.0
+      "position": 57.0,
+      "band": "far - beyond position 50"
     },
     {
       "query": "xirr vs cagr",
       "impressions": 3,
       "clicks": 0,
-      "position": 80.0
-    },
-    {
-      "query": "what is xirr and cagr",
-      "impressions": 1,
-      "clicks": 0,
-      "position": 75.0
+      "position": 80.0,
+      "band": "far - beyond position 50"
     },
     {
       "query": "what is ipo",
       "impressions": 1,
       "clicks": 0,
-      "position": 83.0
+      "position": 83.0,
+      "band": "far - beyond position 50"
+    },
+    {
+      "query": "what is xirr and cagr",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 75.0,
+      "band": "far - beyond position 50"
     }
   ],
-  "ga": "no GA4 property connected - sessions unavailable",
-  "note": "First week this property returned any Search Console rows; the demand loop switches on from this date (2026-11-09). No query yet sits in the striking-distance band (average position 5-20), so the list filed here is every query with at least one impression, all of them at position 39 or worse. Sitemap resubmitted and the priority lesson pages inspected this run; all three inspected URLs report 'Discovered - currently not indexed'."
+  "pages_with_impressions": [
+    {
+      "page": "https://indianfminsights.site/articles/what-is-ipo.html",
+      "impressions": 21,
+      "clicks": 0,
+      "position": 55.9,
+      "band": "far - beyond position 50"
+    },
+    {
+      "page": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
+      "impressions": 12,
+      "clicks": 0,
+      "position": 28.9,
+      "band": "page 2-5 - visible but far from page 1"
+    },
+    {
+      "page": "https://indianfminsights.site/articles/market-falls-sip.html",
+      "impressions": 3,
+      "clicks": 0,
+      "position": 57.3,
+      "band": "far - beyond position 50"
+    },
+    {
+      "page": "https://indianfminsights.site/articles/what-is-sip.html",
+      "impressions": 3,
+      "clicks": 0,
+      "position": 37.3,
+      "band": "page 2-5 - visible but far from page 1"
+    },
+    {
+      "page": "https://indianfminsights.site/",
+      "impressions": 2,
+      "clicks": 0,
+      "position": 9.5,
+      "band": "striking distance - page 1, position 5-20"
+    },
+    {
+      "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 6.0,
+      "band": "striking distance - page 1, position 5-20"
+    }
+  ],
+  "read": "Still a brand-new property: 7 query rows, 0 clicks, and no query inside the 5-20 striking-distance band. The whole impression base is IPO vocabulary ('what is ipo', 'ipo in share market', 'public issue of shares') plus XIRR-vs-CAGR, which tells us the articles/what/what-is-ipo.html and xirr-vs-cagr.html pages are the ones search has started to test. Two pages sit on page one for a single impression each - the homepage at position 9.5 and why-gold-prices-move.html at 6.0 - which are leads, not trends."
 }

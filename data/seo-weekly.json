@@ -7,10 +7,10 @@
   "page_striking_distance": [
     {
       "page": "https://indianfminsights.site/",
-      "impressions": 3,
-      "position": 6.67,
+      "impressions": 2,
+      "position": 9.5,
       "band": "striking distance - page 1, position 5-20",
-      "note": "The homepage sits on page one for brand-adjacent queries; the market brief it links to is the natural next click."
+      "note": "Page one on a brand-adjacent query; the market brief it links to is the natural next click."
     },
     {
       "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
@@ -113,5 +113,7 @@
   "analytics": {
     "status": "no_property",
     "note": "No Google Analytics account or property is available for the site."
-  }
+  },
+  "refreshed": "2026-11-10T16:30:00+05:30",
+  "refresh_note": "Re-read on 10 Nov 2026 for the 28 days to 9 Nov 2026: 7 query rows, 0 clicks, no query in the 5-20 striking-distance band. The week ending 8 Nov list below is unchanged, because no query has entered the band since it was filed. Full rolling read: data/seo_search_demand.json"
 }
