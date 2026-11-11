@@ -1,7 +1,7 @@
 {
   "week_ending": "2026-11-08",
   "property": "https://indianfminsights.site/",
-  "window": "2026-10-11 to 2026-11-07",
+  "window": "2026-10-13 to 2026-11-10",
   "first_rows_date": "2026-11-03",
   "striking_distance": [],
   "page_striking_distance": [
@@ -24,7 +24,7 @@
     {
       "query": "public issue of shares",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0.0,
       "position": 67.0,
       "band": "far - beyond position 50"
@@ -32,18 +32,26 @@
     {
       "query": "what is ipo in india",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 7,
       "ctr": 0.0,
-      "position": 47.5,
-      "band": "far - beyond position 30"
+      "position": 48.0,
+      "band": "page 2-5 - visible but far from page 1"
     },
     {
       "query": "ipo in share market",
       "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 39.0,
+      "band": "page 2-5 - visible but far from page 1"
+    },
+    {
+      "query": "what is ipo in share market",
+      "clicks": 0,
       "impressions": 3,
       "ctr": 0.0,
-      "position": 36.67,
-      "band": "far - beyond position 30"
+      "position": 57.0,
+      "band": "far - beyond position 50"
     },
     {
       "query": "xirr vs cagr",
@@ -52,14 +60,6 @@
       "ctr": 0.0,
       "position": 80.0,
       "band": "far - beyond position 50"
-    },
-    {
-      "query": "what is ipo in share market",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0.0,
-      "position": 46.5,
-      "band": "far - beyond position 30"
     },
     {
       "query": "what is ipo",
@@ -78,14 +78,15 @@
       "band": "far - beyond position 50"
     }
   ],
-  "note": "Search Console over the 28 days to 7 Nov 2026 returned 7 query rows, 21 impressions and 0 clicks, and 5 page rows carrying 35 impressions, also with 0 clicks. No query sits in the striking-distance band (position 5-20): the best is 'ipo in share market' at position 36.7 and every row is beyond position 30, so there is no query-level striking-distance keyword to file this week. Page level is the useful signal: the homepage holds position 6.67 on 3 impressions and articles/why-gold-prices-move.html position 6.0 on 1 impression, both inside the top ten, while the two pages collecting the most impressions are still deep - articles/what-is-ipo.html (17 impressions, position 55.6) and articles/xirr-vs-cagr.html (12 impressions, position 28.9). Demand is still IPO and return-measurement education: five of the seven queries ask what an IPO or a public issue of shares is, and the remaining two ask for the XIRR-versus-CAGR difference. The sitemap was resubmitted on 8 Nov 2026; Search Console reports 45 URLs submitted, 0 errors and 0 warnings, last downloaded 7 Nov 2026. The priority lesson page what-is-ipo.html was inspected on 8 Nov 2026 and PASSes as 'Submitted and indexed', with a successful fetch, INDEXING_ALLOWED and robots.txt ALLOWED, last crawled 31 Oct 2026; the other two priority pages passed the same check on 7 Nov 2026. Google Analytics still returns no account and no property, so there is no session data; it remains a when-available input and did not block the brief.",
+  "note": "Search Console over the 28 days to 10 Nov 2026 returned 7 query rows, 27 impressions and 0 clicks, and 6 page rows carrying 44 impressions, also with 0 clicks. No query sits in the striking-distance band (position 5-20): the best is 'ipo in share market' at position 39.0 and every row is beyond position 30, so there is no query-level striking-distance keyword to file this week. Page level carries the only signal: the homepage holds position 9.5 on 2 impressions and articles/why-gold-prices-move.html position 6.0 on 1 impression, both inside the top ten, while the pages collecting the most impressions are still deep - articles/what-is-ipo.html (23 impressions, position 55.7) and articles/xirr-vs-cagr.html (12 impressions, position 28.9). Demand is still IPO and return-measurement education: five of the seven queries ask what an IPO or a public issue of shares is, and the other two ask for the XIRR-versus-CAGR difference. The sitemap was resubmitted on 11 Nov 2026; Search Console reports 45 URLs submitted, 0 errors and 0 warnings, last downloaded 10 Nov 2026. The priority lesson page what-is-ipo.html was inspected on 11 Nov 2026 and still PASSes as 'Submitted and indexed', with a successful fetch, INDEXING_ALLOWED and robots.txt ALLOWED, last crawled 31 Oct 2026. markets.html, inspected the same day, reports 'Discovered - currently not indexed', which is the normal state for a page Google has found but not yet crawled and is recorded rather than treated as a fault. Google Analytics still returns no account and no property, so there is no session data; it remains a when-available input and did not block the brief.",
   "sitemap": {
     "path": "https://indianfminsights.site/sitemap.xml",
     "submitted": 45,
     "indexed": 0,
     "errors": 0,
-    "last_submitted": "2026-11-08",
-    "last_downloaded": "2026-11-07"
+    "warnings": 0,
+    "last_submitted": "2026-11-11",
+    "last_downloaded": "2026-11-10"
   },
   "inspections": [
     {
@@ -93,27 +94,20 @@
       "coverage_state": "Submitted and indexed",
       "last_crawled": "2026-10-31",
       "verdict": "PASS",
-      "inspected": "2026-11-08"
+      "inspected": "2026-11-11"
     },
     {
-      "url": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
-      "coverage_state": "Submitted and indexed",
-      "last_crawled": "2026-10-31",
-      "verdict": "PASS",
-      "inspected": "2026-11-07"
-    },
-    {
-      "url": "https://indianfminsights.site/articles/why-gold-prices-move.html",
-      "coverage_state": "Submitted and indexed",
-      "last_crawled": "2026-10-31",
-      "verdict": "PASS",
-      "inspected": "2026-11-07"
+      "url": "https://indianfminsights.site/markets.html",
+      "coverage_state": "Discovered - currently not indexed",
+      "last_crawled": null,
+      "verdict": "NEUTRAL",
+      "inspected": "2026-11-11"
     }
   ],
   "analytics": {
     "status": "no_property",
     "note": "No Google Analytics account or property is available for the site."
   },
-  "refreshed": "2026-11-10T16:30:00+05:30",
-  "refresh_note": "Re-read on 10 Nov 2026 for the 28 days to 9 Nov 2026: 7 query rows, 0 clicks, no query in the 5-20 striking-distance band. The week ending 8 Nov list below is unchanged, because no query has entered the band since it was filed. Full rolling read: data/seo_search_demand.json"
+  "refreshed": "2026-11-11T16:30:00+05:30",
+  "refresh_note": "Re-read on 11 Nov 2026 for the 28 days to 10 Nov 2026: 7 query rows, 27 impressions, 0 clicks, and still no query in the 5-20 striking-distance band. The week ending 8 Nov list is unchanged, because no query has entered the band since it was filed. Full rolling read: data/seo_search_demand.json"
 }
