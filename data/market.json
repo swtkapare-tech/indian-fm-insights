@@ -1,50 +1,49 @@
 {
-  "as_of": "2026-11-09T15:30:00+05:30",
-  "label": "Verified close - last session",
-  "note": "Equity and currency markets were shut on Tuesday 10 November 2026 for Diwali-Balipratipada, so there was no close today. The index and rupee levels below are Monday 9 November 2026's verified close, carried forward with that date attached. Gold and silver are IBJA's 10 November morning benchmark, the latest published fixing.",
+  "as_of": "2026-11-11T15:30:00+05:30",
+  "label": "Verified close",
+  "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
   "session": {
-    "date": "2026-11-09",
-    "label": "Monday 9 November 2026",
-    "status": "market holiday today - no close",
-    "reason": "Diwali-Balipratipada on 10 November 2026; the last session was Monday 9 November 2026"
+    "date": "2026-11-11",
+    "label": "Wednesday, 11 November 2026",
+    "status": "trading day - close published"
   },
-  "updated": "2026-11-10T16:30:00+05:30",
+  "updated": "2026-11-11T15:30:00+05:30",
   "quotes": {
     "nifty": {
-      "value": 25044.65,
-      "change": 58.25,
-      "pct": 0.23,
+      "value": 25255.05,
+      "change": 210.4,
+      "pct": 0.84,
       "dp": 2
     },
     "sensex": {
-      "value": 81106.65,
-      "change": 107.25,
-      "pct": 0.13,
+      "value": 81879.4,
+      "change": 772.75,
+      "pct": 0.95,
       "dp": 2
     },
     "usdinr": {
-      "value": 93.93,
-      "change": 0.02,
-      "pct": 0.02,
+      "value": 93.69,
+      "change": -0.24,
+      "pct": -0.26,
       "dp": 2
     },
     "gold": {
-      "value": 142420,
-      "change": 968,
-      "pct": 0.68,
+      "value": 140805,
+      "change": -1615,
+      "pct": -1.13,
       "dp": 0
     },
     "silver": {
-      "value": 186000,
-      "change": 3132,
-      "pct": 1.71,
+      "value": 186495,
+      "change": 495,
+      "pct": 0.27,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 25,044.65 (+58.25, +0.23%) and Sensex close 81,106.65 (+107.25, +0.13%) - NSE's official index closing file for 9 Nov 2026 (ind_close_all_09112026.csv) and the day's closing reports from The Hindu / PTI, Business Standard and Moneycontrol, all dated 9 Nov 2026",
-    "Session shape (Nifty intraday low 24,838.75 and high 25,084.05; Sensex low 80,519.31 and high 81,339.41) - Upstox market wrap for 9 Nov 2026 and PTI's closing report, 9 Nov 2026",
-    "USD / INR 93.93 (Reuters mid of 93.9275) - The Hindu BusinessLine's 9 Nov 2026 forex report and Reuters' closing report published by Moneycontrol the same day; Friday's base of 93.91 is BusinessLine's, and is the base used for the change shown here",
-    "Gold 24K 999 Rs 1,42,420 per 10 g and silver 999 Rs 1,86,000 per kg - IBJA's 10 Nov 2026 morning benchmark as published on ibjarates.com, independently republished the same day by Rozbhav (which records the 12:00 IST publication) and Democratic Bharat Live. Compared with IBJA's last fixing on 6 Nov 2026 (Rs 1,41,452 per 10 g and Rs 1,82,868 per kg), gold is up Rs 968 (+0.68%) and silver up Rs 3,132 (+1.71%)"
+    "Nifty 50 close 25,255.05 (+210.40, +0.84%) and Sensex close 81,879.40 (+772.75, +0.95%) &mdash; NSE and BSE closing data as reported by PTI (carried by Rediff Moneynews and The New Indian Express), Business Standard, Zee Business and The Hindu BusinessLine, all dated 11 Nov 2026",
+    "Session shape (Nifty open 25,337.80, high 25,424.35, low 25,095.35; Sensex open 82,248.68, high 82,520.40, low 81,417.39) &mdash; Zee Business closing report and India Today&rsquo;s market close report, both dated 11 Nov 2026",
+    "USD / INR 93.69 &mdash; Reuters&rsquo; closing report, published by Business Recorder on 11 Nov 2026, and Moneycontrol&rsquo;s closing bell the same afternoon, which both put the rupee 24 paise firmer than Monday&rsquo;s 93.93; PTI&rsquo;s provisional print was 93.70, one paise away, and is noted rather than used",
+    "Gold 24K 999 &#8377;1,40,805 per 10 g and silver 999 &#8377;1,86,495 per kg &mdash; IBJA&rsquo;s 11 Nov 2026 benchmark as published on ibjarates.com at 12:00 IST, independently republished the same day by Rozbhav (which logs the 12:00 IST publication) and Times Bull. Against the 10 November benchmark of &#8377;1,42,420 per 10 g and &#8377;1,86,000 per kg that is -&#8377;1,615 (-1.13%) and +&#8377;495 (+0.27%)"
   ]
 }
