@@ -2,13 +2,13 @@
   "property": "https://indianfminsights.site/",
   "window": {
     "start": "2026-10-13",
-    "end": "2026-11-09",
+    "end": "2026-11-10",
     "days": 28
   },
-  "pulled": "2026-11-10T16:30:00+05:30",
+  "pulled": "2026-11-11T16:30:00+05:30",
   "source": "Google Search Console, searchAnalytics by query and by page",
   "totals": {
-    "impressions_sum_of_returned_query_rows": 25,
+    "impressions_sum_of_returned_query_rows": 27,
     "clicks": 0,
     "note": "Query rows exclude anonymised queries, so the row sum can be below the property's true impression count; page rows are shown separately and are not additive with query rows."
   },
@@ -23,9 +23,9 @@
     },
     {
       "query": "what is ipo in india",
-      "impressions": 5,
+      "impressions": 7,
       "clicks": 0,
-      "position": 45.6,
+      "position": 48.0,
       "band": "page 2-5 - visible but far from page 1"
     },
     {
@@ -67,9 +67,9 @@
   "pages_with_impressions": [
     {
       "page": "https://indianfminsights.site/articles/what-is-ipo.html",
-      "impressions": 21,
+      "impressions": 23,
       "clicks": 0,
-      "position": 55.9,
+      "position": 55.7,
       "band": "far - beyond position 50"
     },
     {
@@ -108,5 +108,5 @@
       "band": "striking distance - page 1, position 5-20"
     }
   ],
-  "read": "Still a brand-new property: 7 query rows, 0 clicks, and no query inside the 5-20 striking-distance band. The whole impression base is IPO vocabulary ('what is ipo', 'ipo in share market', 'public issue of shares') plus XIRR-vs-CAGR, which tells us the articles/what/what-is-ipo.html and xirr-vs-cagr.html pages are the ones search has started to test. Two pages sit on page one for a single impression each - the homepage at position 9.5 and why-gold-prices-move.html at 6.0 - which are leads, not trends."
+  "read": "Still a brand-new property: 7 query rows, 27 impressions and 0 clicks, and no query inside the 5-20 striking-distance band - the best is 'ipo in share market' at position 39.0, and every row is beyond position 30. Demand remains IPO vocabulary plus XIRR-vs-CAGR, the same two clusters as last week, so the pages search is testing are articles/what-is-ipo.html (23 impressions, position 55.7) and articles/xirr-vs-cagr.html (12 impressions, position 28.9). Page level is the only striking-distance signal: the homepage holds position 9.5 and why-gold-prices-move.html position 6.0, on 2 and 1 impressions - leads, not trends."
 }
