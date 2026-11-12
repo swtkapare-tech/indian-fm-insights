@@ -1,49 +1,49 @@
 {
-  "as_of": "2026-11-11T15:30:00+05:30",
+  "as_of": "2026-11-12T15:30:00+05:30",
   "label": "Verified close",
   "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
   "session": {
-    "date": "2026-11-11",
-    "label": "Wednesday, 11 November 2026",
+    "date": "2026-11-12",
+    "label": "Thursday, 12 November 2026",
     "status": "trading day - close published"
   },
-  "updated": "2026-11-11T15:30:00+05:30",
+  "updated": "2026-11-12T15:30:00+05:30",
   "quotes": {
     "nifty": {
-      "value": 25255.05,
-      "change": 210.4,
-      "pct": 0.84,
+      "value": 25299.35,
+      "change": 44.3,
+      "pct": 0.18,
       "dp": 2
     },
     "sensex": {
-      "value": 81879.4,
-      "change": 772.75,
-      "pct": 0.95,
+      "value": 81911.01,
+      "change": 31.61,
+      "pct": 0.04,
       "dp": 2
     },
     "usdinr": {
-      "value": 93.69,
-      "change": -0.24,
-      "pct": -0.26,
+      "value": 94.04,
+      "change": 0.35,
+      "pct": 0.37,
       "dp": 2
     },
     "gold": {
-      "value": 140805,
-      "change": -1615,
-      "pct": -1.13,
+      "value": 138294,
+      "change": -2511,
+      "pct": -1.78,
       "dp": 0
     },
     "silver": {
-      "value": 186495,
-      "change": 495,
-      "pct": 0.27,
+      "value": 181999,
+      "change": -4496,
+      "pct": -2.41,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 25,255.05 (+210.40, +0.84%) and Sensex close 81,879.40 (+772.75, +0.95%) &mdash; NSE and BSE closing data as reported by PTI (carried by Rediff Moneynews and The New Indian Express), Business Standard, Zee Business and The Hindu BusinessLine, all dated 11 Nov 2026",
-    "Session shape (Nifty open 25,337.80, high 25,424.35, low 25,095.35; Sensex open 82,248.68, high 82,520.40, low 81,417.39) &mdash; Zee Business closing report and India Today&rsquo;s market close report, both dated 11 Nov 2026",
-    "USD / INR 93.69 &mdash; Reuters&rsquo; closing report, published by Business Recorder on 11 Nov 2026, and Moneycontrol&rsquo;s closing bell the same afternoon, which both put the rupee 24 paise firmer than Monday&rsquo;s 93.93; PTI&rsquo;s provisional print was 93.70, one paise away, and is noted rather than used",
-    "Gold 24K 999 &#8377;1,40,805 per 10 g and silver 999 &#8377;1,86,495 per kg &mdash; IBJA&rsquo;s 11 Nov 2026 benchmark as published on ibjarates.com at 12:00 IST, independently republished the same day by Rozbhav (which logs the 12:00 IST publication) and Times Bull. Against the 10 November benchmark of &#8377;1,42,420 per 10 g and &#8377;1,86,000 per kg that is -&#8377;1,615 (-1.13%) and +&#8377;495 (+0.27%)"
+    "Nifty 50 close 25,299.35 (+44.30, +0.18%) and Sensex close 81,911.01 (+31.61, +0.04%) &mdash; NSE and BSE closing data as reported by PTI (carried by PTI News and The Tribune/ANI), Moneycontrol, The Hindu BusinessLine, Zee Business and Reuters (published by Business Recorder), all dated 12 Nov 2026",
+    "Session shape (Nifty high 25,384.80, low 25,142.95; Sensex high 82,325.61, low 81,576.15) &mdash; PTI&rsquo;s closing report and Moneycontrol&rsquo;s closing bell, both dated 12 Nov 2026",
+    "USD / INR 94.04 &mdash; Reuters&rsquo; closing report, published by Business Recorder on 12 Nov 2026, put the rupee at 94.0425 per dollar, 0.4% weaker than Wednesday&rsquo;s 93.69; PTI&rsquo;s provisional print, carried by Deccan Herald the same afternoon, was 94.04, 33 paise weaker than its own 93.71 previous close. The level agrees to two decimals; the paise change here is measured against Wednesday&rsquo;s verified 93.69 close",
+    "Gold 24K 999 &#8377;1,38,294 per 10 g and silver 999 &#8377;1,81,999 per kg &mdash; IBJA&rsquo;s 12 Nov 2026 AM benchmark as published on ibjarates.com at 12:00 IST and independently republished the same day by Rozbhav (which logs the 12:00 IST publication and the 1:00 PM fetch) and by Dainik Bhaskar via Goodreturns. Against the 11 November AM benchmark of &#8377;1,40,805 per 10 g and &#8377;1,86,495 per kg that is -&#8377;2,511 (-1.78%) and -&#8377;4,496 (-2.41%). IBJA&rsquo;s 12 Nov PM session was not yet published when this page was refreshed, so the morning benchmark is used and labelled"
   ]
 }
