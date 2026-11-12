@@ -98,6 +98,25 @@ def main():
             if embedded.get("sources") != snap.get("sources"):
                 fail(f"{page}: snapshot sources differ from data/market.json")
 
+    # --- 1b. EVERY page that carries a snapshot must carry the same one ------
+    # Found 12 Nov 2026: 16 pages (lessons, calculators, glossary, faq, about,
+    # search, privacy, 404) still carried the 22 October close in their ticker
+    # while the homepage showed the current session. The first version of this
+    # checker only looked at three pages, which is exactly how that survived.
+    for page in sorted(os.path.basename(p) for p in glob.glob(os.path.join(ROOT, "*.html"))):
+        src = read(page)
+        m = SNAPSHOT_RE.search(src)
+        if not m:
+            continue  # a standalone verification file (the Google site-verification page) has no shell
+        try:
+            embedded = json.loads(m.group(1))
+        except json.JSONDecodeError as e:
+            fail(f"{page}: ifm-snapshot is not valid JSON ({e})")
+            continue
+        if embedded != snap:
+            got = embedded.get("session", {}).get("date") or embedded.get("as_of")
+            fail(f"{page}: ticker snapshot is from {got}, data/market.json says {session}")
+
     # --- 2. the human-readable figures must appear on each page --------------
     for page in PAGES:
         src = read(page)

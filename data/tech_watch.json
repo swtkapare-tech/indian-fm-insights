@@ -52,6 +52,14 @@
       "root_cause": "The 16:30 job had no script, no guard and no ledger - unlike the reel pipeline, which has all three.",
       "fix": "This file, plus tools/site_check.py, plus the rule that a run which changes the site must log here.",
       "status": "fixed"
+    },
+    {
+      "date": "2026-11-12",
+      "id": "D6",
+      "what": "16 pages - lessons, all 8 calculators, glossary, FAQ, about, search, privacy and 404 - still carried the 22 October 2026 close in their site-wide ticker (Nifty 22,687.65, Sensex 73,249.39, gold 1,48,070) while the homepage showed 12 November. A reader moving from the homepage to any lesson saw two different markets.",
+      "root_cause": "The brief job only ever wrote the three pages it considered 'the brief'. The ticker snapshot lives on every page, and nothing owned it. The first version of tools/site_check.py checked three pages too, which is why it did not catch this.",
+      "fix": "All 16 pages now carry the same snapshot as data/market.json, and site_check.py now checks EVERY .html file that carries a snapshot, not just the three brief pages.",
+      "status": "fixed, guarded"
     }
   ],
   "open_items": [
