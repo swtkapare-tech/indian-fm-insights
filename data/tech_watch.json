@@ -1,91 +1,95 @@
 {
-  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
-  "updated": "2026-11-12",
-  "gsc_loop": {
-    "property": "https://indianfminsights.site/",
-    "first_rows_date": "2026-11-03",
-    "state": "ON - Search Console is returning query rows since 3 Nov 2026, so the demand read is no longer empty",
-    "note": "The skill said to record the first week that returns rows. That date was never written down until 12 Nov 2026, which is why the loop looked dead. It is recorded now and this entry is the switch-on."
+ "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
+ "updated": "2026-11-12",
+ "gsc_loop": {
+  "property": "https://indianfminsights.site/",
+  "first_rows_date": "2026-11-03",
+  "state": "ON - Search Console is returning query rows since 3 Nov 2026, so the demand read is no longer empty",
+  "note": "The skill said to record the first week that returns rows. That date was never written down until 12 Nov 2026, which is why the loop looked dead. It is recorded now and this entry is the switch-on."
+ },
+ "ga4": {
+  "state": "no property",
+  "checked": "2026-11-12",
+  "note": "The Analytics connector is authorised but returns no account and no property. Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+ },
+ "defects_found": [
+  {
+   "date": "2026-11-12",
+   "id": "D1",
+   "what": "markets.html kept the heading 'Markets - Monday 9 November 2026 close' after the 11 Nov brief rewrote the numbers underneath it.",
+   "root_cause": "No checker. The brief was hand-built each evening, so a dated string that was not rewritten shipped silently.",
+   "fix": "Heading corrected, and tools/site_check.py now fails any body date older than the published session.",
+   "status": "fixed, guarded"
   },
-  "ga4": {
-    "state": "no property",
-    "checked": "2026-11-12",
-    "note": "The Analytics connector is authorised but returns no account and no property. Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  {
+   "date": "2026-11-12",
+   "id": "D2",
+   "what": "The 11 Nov brief was published as SIX separate commits (16:46:02 to 16:46:15), one file per commit, so for those 13 seconds the homepage and markets page disagreed.",
+   "root_cause": "The write step committed per file instead of per run. Same on the SEO files (2 commits on 11 Nov).",
+   "fix": "The rule is now one atomic commit per run covering every file the run touches. This commit follows it.",
+   "status": "fixed, rule recorded"
   },
-  "defects_found": [
-    {
-      "date": "2026-11-12",
-      "id": "D1",
-      "what": "markets.html kept the heading 'Markets - Monday 9 November 2026 close' after the 11 Nov brief rewrote the numbers underneath it.",
-      "root_cause": "No checker. The brief was hand-built each evening, so a dated string that was not rewritten shipped silently.",
-      "fix": "Heading corrected, and tools/site_check.py now fails any body date older than the published session.",
-      "status": "fixed, guarded"
-    },
-    {
-      "date": "2026-11-12",
-      "id": "D2",
-      "what": "The 11 Nov brief was published as SIX separate commits (16:46:02 to 16:46:15), one file per commit, so for those 13 seconds the homepage and markets page disagreed.",
-      "root_cause": "The write step committed per file instead of per run. Same on the SEO files (2 commits on 11 Nov).",
-      "fix": "The rule is now one atomic commit per run covering every file the run touches. This commit follows it.",
-      "status": "fixed, rule recorded"
-    },
-    {
-      "date": "2026-11-12",
-      "id": "D3",
-      "what": "The Market News page carried 20 stories dated 27-29 September 2026 - six weeks stale - under a snapshot that refreshed daily.",
-      "root_cause": "Nothing measured the age of the cards, and no job owned the news page.",
-      "fix": "Rebuilt with 8 verified stories dated 7-12 Nov 2026, each linked to its source. tools/site_check.py now fails if the newest card is older than 14 days.",
-      "status": "fixed, guarded"
-    },
-    {
-      "date": "2026-11-12",
-      "id": "D4",
-      "what": "October CPI (6.09%, above the RBI's 6% ceiling) was published at about 16:05 IST, before the 16:30 refresh, and the brief still said the data was 'due later in the day'.",
-      "root_cause": "The brief was written from the 15:30 close and nothing re-read the tape between writing and publishing.",
-      "fix": "The post-close print is now carried on the markets page and the news page, attributed to NSO, Business Standard and BusinessLine.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-11-12",
-      "id": "D5",
-      "what": "There was no site-side log of improvements at all: the skill's CHANGELOG records reel/lab work only, so the site looked like it never improved.",
-      "root_cause": "The 16:30 job had no script, no guard and no ledger - unlike the reel pipeline, which has all three.",
-      "fix": "This file, plus tools/site_check.py, plus the rule that a run which changes the site must log here.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-11-12",
-      "id": "D6",
-      "what": "16 pages - lessons, all 8 calculators, glossary, FAQ, about, search, privacy and 404 - still carried the 22 October 2026 close in their site-wide ticker (Nifty 22,687.65, Sensex 73,249.39, gold 1,48,070) while the homepage showed 12 November. A reader moving from the homepage to any lesson saw two different markets.",
-      "root_cause": "The brief job only ever wrote the three pages it considered 'the brief'. The ticker snapshot lives on every page, and nothing owned it. The first version of tools/site_check.py checked three pages too, which is why it did not catch this.",
-      "fix": "All 16 pages now carry the same snapshot as data/market.json, and site_check.py now checks EVERY .html file that carries a snapshot, not just the three brief pages.",
-      "status": "fixed, guarded"
-    }
-  ],
-  "open_items": [
-    {
-      "item": "The lesson, calculator, glossary, FAQ and about pages all carry the same 22 Oct 2026 stamp.",
-      "why_it_matters": "A single shared stamp across five pages reads as templated, and it is 3 weeks old.",
-      "owner": "needs a decision - these pages change only when the content changes, so the stamp should be per page, not shared"
-    },
-    {
-      "item": "27 lesson pages share identical footer, disclaimer and related-lesson blocks.",
-      "why_it_matters": "The shared sentences are boilerplate, not duplicated lessons - the lesson bodies are distinct. But the identical closing blocks are what makes the library read as repetitive.",
-      "owner": "a design decision, not a data fix"
-    }
-  ],
-  "improvements": [
-    {
-      "date": "2026-11-12",
-      "what": "Added tools/site_check.py - cross-file consistency, dated-string, sitemap, feed and staleness checks against data/market.json as the single source of truth."
-    },
-    {
-      "date": "2026-11-12",
-      "what": "Market News rebuilt with verified stories from 7-12 Nov 2026 and a 14-day freshness rule."
-    },
-    {
-      "date": "2026-11-12",
-      "what": "Recorded the Search Console switch-on date (3 Nov 2026) so the demand loop is visibly running."
-    }
-  ]
+  {
+   "date": "2026-11-12",
+   "id": "D3",
+   "what": "The Market News page carried 20 stories dated 27-29 September 2026 - six weeks stale - under a snapshot that refreshed daily.",
+   "root_cause": "Nothing measured the age of the cards, and no job owned the news page.",
+   "fix": "Rebuilt with 8 verified stories dated 7-12 Nov 2026, each linked to its source. tools/site_check.py now fails if the newest card is older than 14 days.",
+   "status": "fixed, guarded"
+  },
+  {
+   "date": "2026-11-12",
+   "id": "D4",
+   "what": "October CPI (6.09%, above the RBI's 6% ceiling) was published at about 16:05 IST, before the 16:30 refresh, and the brief still said the data was 'due later in the day'.",
+   "root_cause": "The brief was written from the 15:30 close and nothing re-read the tape between writing and publishing.",
+   "fix": "The post-close print is now carried on the markets page and the news page, attributed to NSO, Business Standard and BusinessLine.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-11-12",
+   "id": "D5",
+   "what": "There was no site-side log of improvements at all: the skill's CHANGELOG records reel/lab work only, so the site looked like it never improved.",
+   "root_cause": "The 16:30 job had no script, no guard and no ledger - unlike the reel pipeline, which has all three.",
+   "fix": "This file, plus tools/site_check.py, plus the rule that a run which changes the site must log here.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-11-12",
+   "id": "D6",
+   "what": "16 pages - lessons, all 8 calculators, glossary, FAQ, about, search, privacy and 404 - still carried the 22 October 2026 close in their site-wide ticker (Nifty 22,687.65, Sensex 73,249.39, gold 1,48,070) while the homepage showed 12 November. A reader moving from the homepage to any lesson saw two different markets.",
+   "root_cause": "The brief job only ever wrote the three pages it considered 'the brief'. The ticker snapshot lives on every page, and nothing owned it. The first version of tools/site_check.py checked three pages too, which is why it did not catch this.",
+   "fix": "All 16 pages now carry the same snapshot as data/market.json, and site_check.py now checks EVERY .html file that carries a snapshot, not just the three brief pages.",
+   "status": "fixed, guarded"
+  }
+ ],
+ "open_items": [
+  {
+   "item": "The lesson, calculator, glossary, FAQ and about pages all carry the same 22 Oct 2026 stamp.",
+   "why_it_matters": "A single shared stamp across five pages reads as templated, and it is 3 weeks old.",
+   "owner": "needs a decision - these pages change only when the content changes, so the stamp should be per page, not shared"
+  },
+  {
+   "item": "27 lesson pages share identical footer, disclaimer and related-lesson blocks.",
+   "why_it_matters": "The shared sentences are boilerplate, not duplicated lessons - the lesson bodies are distinct. But the identical closing blocks are what makes the library read as repetitive.",
+   "owner": "a design decision, not a data fix"
+  }
+ ],
+ "improvements": [
+  {
+   "date": "2026-11-13",
+   "what": "13 Nov brief committed in one atomic commit. The 28 lesson pages still carried a 22 Oct snapshot (Nifty 22,687.65) - six weeks stale, and outside the 3 pages the 12 Nov fix covered; all 46 snapshot-bearing pages now share data/market.json. IBJA's 13 Nov AM benchmark replaces the 12 Nov figure, and the duplicated note paragraphs in the markets bullion panel were removed."
+  },
+  {
+   "date": "2026-11-12",
+   "what": "Added tools/site_check.py - cross-file consistency, dated-string, sitemap, feed and staleness checks against data/market.json as the single source of truth."
+  },
+  {
+   "date": "2026-11-12",
+   "what": "Market News rebuilt with verified stories from 7-12 Nov 2026 and a 14-day freshness rule."
+  },
+  {
+   "date": "2026-11-12",
+   "what": "Recorded the Search Console switch-on date (3 Nov 2026) so the demand loop is visibly running."
+  }
+ ]
 }

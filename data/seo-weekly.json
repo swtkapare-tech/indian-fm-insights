@@ -1,150 +1,150 @@
 {
-  "week_ending": "2026-11-15",
-  "property": "https://indianfminsights.site/",
-  "window": "2026-10-16 to 2026-11-12",
-  "first_rows_date": "2026-11-03",
-  "striking_distance": [],
-  "page_striking_distance": [
-    {
-      "page": "https://indianfminsights.site/",
-      "impressions": 2,
-      "position": 9.5,
-      "band": "striking distance - page 1, position 5-20",
-      "note": "The homepage holds a page-one position on a brand-adjacent query; the market brief it links to is the natural next click."
-    },
-    {
-      "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
-      "impressions": 1,
-      "position": 6.0,
-      "band": "striking distance - page 1, position 5-20",
-      "note": "One impression only, so a lead rather than a trend: the strongest position of any article page this window."
-    }
-  ],
-  "queries": [
-    {
-      "query": "ipo in share market",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0.0,
-      "position": 39.0,
-      "band": "page 2-5 - visible but far from page 1"
-    },
-    {
-      "query": "monthly sip meaning",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 81.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "query": "monthly sip means",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0.0,
-      "position": 74.5,
-      "band": "far - beyond position 50"
-    },
-    {
-      "query": "public issue of shares",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0.0,
-      "position": 67.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "query": "what is ipo",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 83.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "query": "what is ipo in india",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0.0,
-      "position": 46.875,
-      "band": "page 2-5 - visible but far from page 1"
-    },
-    {
-      "query": "what is ipo in share market",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0.0,
-      "position": 57.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "query": "what is xirr and cagr",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 75.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "query": "xirr vs cagr",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0.0,
-      "position": 80.0,
-      "band": "far - beyond position 50"
-    }
-  ],
-  "pages": [
-    {
-      "page": "https://indianfminsights.site/",
-      "clicks": 0,
-      "impressions": 2,
-      "position": 9.5,
-      "band": "striking distance - page 1, position 5-20"
-    },
-    {
-      "page": "https://indianfminsights.site/articles/market-falls-sip.html",
-      "clicks": 0,
-      "impressions": 3,
-      "position": 57.3,
-      "band": "far - beyond position 50"
-    },
-    {
-      "page": "https://indianfminsights.site/articles/what-is-ipo.html",
-      "clicks": 0,
-      "impressions": 24,
-      "position": 55.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "page": "https://indianfminsights.site/articles/what-is-sip.html",
-      "clicks": 0,
-      "impressions": 6,
-      "position": 57.0,
-      "band": "far - beyond position 50"
-    },
-    {
-      "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 6.0,
-      "band": "striking distance - page 1, position 5-20"
-    },
-    {
-      "page": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
-      "clicks": 0,
-      "impressions": 12,
-      "position": 28.9,
-      "band": "page 2-5 - visible but far from page 1"
-    }
-  ],
-  "totals": {
-    "impressions_sum_of_returned_query_rows": 31,
-    "clicks": 0,
-    "queries_returned": 9,
-    "pages_with_impressions": 6
+ "week_ending": "2026-11-15",
+ "property": "https://indianfminsights.site/",
+ "window": "2026-10-17 to 2026-11-13",
+ "first_rows_date": "2026-11-03",
+ "striking_distance": [],
+ "page_striking_distance": [
+  {
+   "page": "https://indianfminsights.site/",
+   "impressions": 2,
+   "position": 9.5,
+   "band": "striking distance - page 1, position 5-20",
+   "note": "The homepage holds a page-one position on a brand-adjacent query; the market brief it links to is the natural next click."
   },
-  "ga4": "no property - connector returns no account; sessions not measurable",
-  "action": "Sitemap resubmitted; what-is-ipo.html and what-is-sip.html inspected, both PASS and indexed. Query-level striking distance still empty: best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band yet.",
-  "note": "The site still earns zero clicks. The nearest demand is the IPO cluster (what-is-ipo.html, 24 impressions, average position 55) and the XIRR/CAGR cluster (xirr-vs-cagr.html, 12 impressions, average position 28.9 - the best-placed article page)."
+  {
+   "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
+   "impressions": 1,
+   "position": 6.0,
+   "band": "striking distance - page 1, position 5-20",
+   "note": "One impression only, so a lead rather than a trend: the strongest position of any article page this window."
+  }
+ ],
+ "queries": [
+  {
+   "query": "ipo in share market",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0.0,
+   "position": 39.0,
+   "band": "page 2-5 - visible but far from page 1"
+  },
+  {
+   "query": "monthly sip meaning",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0.0,
+   "position": 81.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "query": "monthly sip means",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0.0,
+   "position": 74.5,
+   "band": "far - beyond position 50"
+  },
+  {
+   "query": "public issue of shares",
+   "clicks": 0,
+   "impressions": 8,
+   "ctr": 0.0,
+   "position": 67.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "query": "what is ipo",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0.0,
+   "position": 83.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "query": "what is ipo in india",
+   "clicks": 0,
+   "impressions": 8,
+   "ctr": 0.0,
+   "position": 46.875,
+   "band": "page 2-5 - visible but far from page 1"
+  },
+  {
+   "query": "what is ipo in share market",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0.0,
+   "position": 57.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "query": "what is xirr and cagr",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0.0,
+   "position": 75.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "query": "xirr vs cagr",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0.0,
+   "position": 80.0,
+   "band": "far - beyond position 50"
+  }
+ ],
+ "pages": [
+  {
+   "page": "https://indianfminsights.site/",
+   "clicks": 0,
+   "impressions": 2,
+   "position": 9.5,
+   "band": "striking distance - page 1, position 5-20"
+  },
+  {
+   "page": "https://indianfminsights.site/articles/market-falls-sip.html",
+   "clicks": 0,
+   "impressions": 3,
+   "position": 57.3,
+   "band": "far - beyond position 50"
+  },
+  {
+   "page": "https://indianfminsights.site/articles/what-is-ipo.html",
+   "clicks": 0,
+   "impressions": 24,
+   "position": 55.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "page": "https://indianfminsights.site/articles/what-is-sip.html",
+   "clicks": 0,
+   "impressions": 6,
+   "position": 57.0,
+   "band": "far - beyond position 50"
+  },
+  {
+   "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
+   "clicks": 0,
+   "impressions": 1,
+   "position": 6.0,
+   "band": "striking distance - page 1, position 5-20"
+  },
+  {
+   "page": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
+   "clicks": 0,
+   "impressions": 12,
+   "position": 28.9,
+   "band": "page 2-5 - visible but far from page 1"
+  }
+ ],
+ "totals": {
+  "impressions_sum_of_returned_query_rows": 31,
+  "clicks": 0,
+  "queries_returned": 9,
+  "pages_with_impressions": 6
+ },
+ "ga4": "no property - connector returns no account; sessions not measurable",
+ "action": "Sitemap resubmitted on 13 Nov 2026 after the brief refresh. Inspected what-is-ipo.html (24 impressions, average position 55.0) and xirr-vs-cagr.html (12 impressions, average position 28.9): both PASS, 'Submitted and indexed', last crawled 31 Oct 2026. Query-level striking distance is still empty - the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance is the homepage (2 impressions, position 9.5) and why-gold-prices-move.html (1 impression, position 6.0).",
+ "note": "No change from the 12 Nov read: the site earns impressions but still zero clicks over the 28-day window. The nearest demand is the IPO cluster (what-is-ipo.html, 24 impressions, average position 55) and the XIRR/CAGR cluster (xirr-vs-cagr.html, 12 impressions, average position 28.9 - the best-placed article page)."
 }
