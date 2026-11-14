@@ -64,9 +64,9 @@
   {
    "query": "what is ipo in india",
    "clicks": 0,
-   "impressions": 8,
+   "impressions": 9,
    "ctr": 0.0,
-   "position": 46.875,
+   "position": 46.56,
    "band": "page 2-5 - visible but far from page 1"
   },
   {
@@ -112,8 +112,8 @@
   {
    "page": "https://indianfminsights.site/articles/what-is-ipo.html",
    "clicks": 0,
-   "impressions": 24,
-   "position": 55.0,
+   "impressions": 25,
+   "position": 54.6,
    "band": "far - beyond position 50"
   },
   {
@@ -139,12 +139,13 @@
   }
  ],
  "totals": {
-  "impressions_sum_of_returned_query_rows": 31,
+  "impressions_sum_of_returned_query_rows": 32,
   "clicks": 0,
   "queries_returned": 9,
   "pages_with_impressions": 6
  },
  "ga4": "no property - connector returns no account; sessions not measurable",
- "action": "Sitemap resubmitted on 13 Nov 2026 after the brief refresh. Inspected what-is-ipo.html (24 impressions, average position 55.0) and xirr-vs-cagr.html (12 impressions, average position 28.9): both PASS, 'Submitted and indexed', last crawled 31 Oct 2026. Query-level striking distance is still empty - the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance is the homepage (2 impressions, position 9.5) and why-gold-prices-move.html (1 impression, position 6.0).",
- "note": "No change from the 12 Nov read: the site earns impressions but still zero clicks over the 28-day window. The nearest demand is the IPO cluster (what-is-ipo.html, 24 impressions, average position 55) and the XIRR/CAGR cluster (xirr-vs-cagr.html, 12 impressions, average position 28.9 - the best-placed article page)."
+ "action": "Sitemap resubmitted on 14 Nov 2026 for the Saturday carry of Friday's close. Inspected the two priority lesson pages: what-is-ipo.html (25 impressions, average position 54.6) and xirr-vs-cagr.html (12 impressions, average position 28.9) both return PASS, 'Submitted and indexed', robots ALLOWED, indexing allowed, last crawled 31 Oct 2026 - the recrawl is what the resubmitted sitemap is meant to prompt. Query-level striking distance is still EMPTY: the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance is the homepage (2 impressions, position 9.5) and why-gold-prices-move.html (1 impression, position 6.0).",
+ "note": "Read 14 Nov 2026 over 17 Oct - 13 Nov: the site earns impressions but still zero clicks. Two rows firmed up against the 13 Nov read (what-is-ipo.html 24 -> 25 impressions, position 55.0 -> 54.6; 'what is ipo in india' 8 -> 9 impressions, position 46.875 -> 46.56); nothing else moved. The nearest demand is the IPO cluster (what-is-ipo.html, 25 impressions) and the XIRR/CAGR cluster (xirr-vs-cagr.html, position 28.9 - the best-placed article page). GA4 still returns no account and no property, so sessions remain unmeasurable; no property was provisioned.",
+ "read_on": "2026-11-14"
 }
