@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-13T15:30:00+05:30",
+  "as_of": "2026-11-13T17:00:00+05:30",
   "label": "Verified close",
-  "note": "Refreshed automatically each trading evening by Indian FM Insights' own research pipeline, with every figure checked against two independent sources.",
+  "note": "Refreshed by Indian FM Insights' own research pipeline, with every figure checked against two independent sources. Markets are closed today, Saturday 14 November 2026, so this page carries Friday's verified close; the next session is Monday 16 November 2026.",
   "session": {
     "date": "2026-11-13",
     "label": "Friday, 13 November 2026",
-    "status": "trading day - close published"
+    "status": "weekend - Friday 13 November 2026 close carried; next session Monday 16 November 2026"
   },
-  "updated": "2026-11-13T15:30:00+05:30",
+  "updated": "2026-11-14T16:30:00+05:30",
   "quotes": {
     "nifty": {
       "value": 25144.3,
@@ -28,15 +28,15 @@
       "dp": 2
     },
     "gold": {
-      "value": 135884,
-      "change": -2410,
-      "pct": -1.74,
+      "value": 135809,
+      "change": -1883,
+      "pct": -1.37,
       "dp": 0
     },
     "silver": {
-      "value": 177500,
-      "change": -4499,
-      "pct": -2.47,
+      "value": 178000,
+      "change": -3040,
+      "pct": -1.68,
       "dp": 0
     }
   },
@@ -44,6 +44,6 @@
     "Nifty 50 close 25,144.30 (-155.05, -0.61%) and Sensex close 81,592.45 (-318.56, -0.39%) &mdash; NSE and BSE closing data as reported by PTI (carried by PTI News, The Hindu BusinessLine and Telegraph India), Moneycontrol, Zee Business and Upstox, all dated 13 Nov 2026",
     "Session shape (Nifty intraday low 25,054.40; Sensex low 81,288.75, a fall of as much as 622.26 points) &mdash; Upstox&rsquo;s market wrap and PTI&rsquo;s closing report, both dated 13 Nov 2026",
     "USD / INR 94.24 &mdash; Reuters&rsquo; closing report, published by Business Recorder on 13 Nov 2026, and Moneycontrol&rsquo;s 15:31 IST currency close both put the rupee at 94.24. PTI&rsquo;s provisional print, carried by The Hindu BusinessLine and News18 the same afternoon, was 94.20 against its own 94.12 previous close. The level published here is the 94.24 that Reuters and Moneycontrol agree on; the 20 paise change is measured against Thursday&rsquo;s verified 94.04 close",
-    "Gold 24K 999 &#8377;1,35,884 per 10 g and silver 999 &#8377;1,77,500 per kg &mdash; IBJA&rsquo;s 13 Nov 2026 AM benchmark as published on ibjarates.com at 12:00 IST and independently republished the same day by Bhavflow (which carries the 13 Nov AM table) and by Rozbhav (which logs the 12:00 IST publication and the 1:00 PM fetch). Against the 12 November AM benchmark of &#8377;1,38,294 per 10 g and &#8377;1,81,999 per kg that is -&#8377;2,410 (-1.74%) and -&#8377;4,499 (-2.47%). IBJA&rsquo;s 13 Nov PM session was not yet published when this page was refreshed, so the morning benchmark is used and labelled"
+    "Gold 24K 999 &#8377;1,35,809 per 10 g and silver 999 &#8377;1,78,000 per kg &mdash; IBJA&rsquo;s 13 Nov 2026 PM benchmark (17:00 IST), the session&rsquo;s final print, as published on ibjarates.com and independently republished the same day by Bhavflow (which carries the 13 Nov PM table), Rozbhav (which logs the 17:00 IST publication and the 6:30 PM fetch), TrendRipperX and Niharika Times. Against the 12 November PM benchmark of &#8377;1,37,692 per 10 g and &#8377;1,81,040 per kg that is -&#8377;1,883 (-1.37%) and -&#8377;3,040 (-1.68%)"
   ]
 }
