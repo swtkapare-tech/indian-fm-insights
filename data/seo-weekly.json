@@ -1,7 +1,7 @@
 {
  "week_ending": "2026-11-15",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-17 to 2026-11-13",
+ "window": "2026-10-19 to 2026-11-15",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
@@ -145,7 +145,7 @@
   "pages_with_impressions": 6
  },
  "ga4": "no property - connector returns no account; sessions not measurable",
- "action": "Sitemap resubmitted on 14 Nov 2026 for the Saturday carry of Friday's close. Inspected the two priority lesson pages: what-is-ipo.html (25 impressions, average position 54.6) and xirr-vs-cagr.html (12 impressions, average position 28.9) both return PASS, 'Submitted and indexed', robots ALLOWED, indexing allowed, last crawled 31 Oct 2026 - the recrawl is what the resubmitted sitemap is meant to prompt. Query-level striking distance is still EMPTY: the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance is the homepage (2 impressions, position 9.5) and why-gold-prices-move.html (1 impression, position 6.0).",
- "note": "Read 14 Nov 2026 over 17 Oct - 13 Nov: the site earns impressions but still zero clicks. Two rows firmed up against the 13 Nov read (what-is-ipo.html 24 -> 25 impressions, position 55.0 -> 54.6; 'what is ipo in india' 8 -> 9 impressions, position 46.875 -> 46.56); nothing else moved. The nearest demand is the IPO cluster (what-is-ipo.html, 25 impressions) and the XIRR/CAGR cluster (xirr-vs-cagr.html, position 28.9 - the best-placed article page). GA4 still returns no account and no property, so sessions remain unmeasurable; no property was provisioned.",
- "read_on": "2026-11-14"
+ "action": "Sitemap resubmitted on 15 Nov 2026 for the Sunday carry of Friday's close (45 URLs, 0 errors, last submitted 14 Nov 2026 11:16 UTC). Inspected what-is-ipo.html again - the highest-impression page - and it still returns PASS, 'Submitted and indexed', robots ALLOWED, indexing allowed, canonical correct, but lastCrawlTime is still 2026-10-31T11:43:36Z: the 14 Nov resubmission has not produced a recrawl in 15 days. The second priority page (xirr-vs-cagr.html) was inspected on 14 Nov with the same result and was not re-inspected today, to stay inside the inspection rate limit. Query-level striking distance is still EMPTY - the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance remains the homepage (2 impressions, position 9.5) and why-gold-prices-move.html (1 impression, position 6.0).",
+ "note": "Read 15 Nov 2026 over 19 Oct - 15 Nov: the same nine query rows and the same six pages as the 14 Nov read, figure for figure (32 impressions on the returned query rows, 0 clicks, 9 queries, 6 pages). Nothing moved because Search Console lags 2-3 days and the two extra days in this window carry no data yet - the read is a confirmation, not a new data point. The nearest demand is still the IPO cluster (what-is-ipo.html, 25 impressions) and the XIRR/CAGR cluster (xirr-vs-cagr.html, average position 28.9, the best-placed article page). GA4 still returns no account and no property, so sessions remain unmeasurable; no property was provisioned.",
+ "read_on": "2026-11-15"
 }
