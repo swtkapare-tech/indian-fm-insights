@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-12",
-  "note": "The Analytics connector is authorised but returns no account and no property. Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-16",
+  "note": "The Analytics connector is authorised but returns no account and no property (an empty response on 16 Nov 2026). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -75,8 +75,13 @@
   },
   {
    "item": "what-is-ipo.html was last crawled by Google on 31 Oct 2026 and the 14 Nov sitemap resubmission has not triggered a recrawl.",
-   "why_it_matters": "The page is the site's best demand signal (25 impressions, position 54.6) and it is being ranked on a three-week-old crawl, so none of the November content changes are in the index.",
+   "why_it_matters": "The page is the site's best demand signal (25 impressions, position 54.6) and it is being ranked on a crawl from 31 Oct 2026 - 16 days old - so none of the November content changes are in the index.",
    "owner": "needs a decision - the sitemap resubmission is the only lever this job has; a manual 'Request indexing' in Search Console, or internal links from newer pages, would have to come from Swati"
+  },
+  {
+   "item": "No page of the site carries the ARN-366695 / NSE AP-2069591891 disclosure block that the social captions carry.",
+   "why_it_matters": "The footer says 'Educational only - not investment advice', but the MFD registration line that AMFI's master circular expects in all communication is absent from the website itself.",
+   "owner": "needs Swati's decision - it is a compliance line, not a data fix, and a run must not invent a registration number"
   }
  ],
  "improvements": [
@@ -99,6 +104,14 @@
   {
    "date": "2026-11-12",
    "what": "Recorded the Search Console switch-on date (3 Nov 2026) so the demand loop is visibly running."
+  },
+  {
+   "date": "2026-11-16",
+   "what": "Monday-close refresh: all 46 snapshot-bearing pages, the homepage lead and glance table, the markets brief, movers, bullion, key points and sources, the news snapshot strip plus three new 16 Nov cards, the sitemap lastmods and the feed entry moved in one commit. Bullion is labelled as IBJA's 12:00 IST AM benchmark because the 17:00 IST print lands after the 16:30 job runs - the first time the brief has published an AM bullion print, and it says so."
+  },
+  {
+   "date": "2026-11-16",
+   "what": "markets.html kept the heading 'Markets - Friday 13 November 2026 close' after the numbers were rewritten: the same D1 defect class, on a string outside every marked region. Corrected in the same commit. site_check.py caught it, which is what D1's guard was for."
   }
  ]
 }
