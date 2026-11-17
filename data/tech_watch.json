@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,7 +9,7 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-16",
+  "checked": "2026-11-17",
   "note": "The Analytics connector is authorised but returns no account and no property (an empty response on 16 Nov 2026). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
@@ -59,6 +59,14 @@
    "what": "16 pages - lessons, all 8 calculators, glossary, FAQ, about, search, privacy and 404 - still carried the 22 October 2026 close in their site-wide ticker (Nifty 22,687.65, Sensex 73,249.39, gold 1,48,070) while the homepage showed 12 November. A reader moving from the homepage to any lesson saw two different markets.",
    "root_cause": "The brief job only ever wrote the three pages it considered 'the brief'. The ticker snapshot lives on every page, and nothing owned it. The first version of tools/site_check.py checked three pages too, which is why it did not catch this.",
    "fix": "All 16 pages now carry the same snapshot as data/market.json, and site_check.py now checks EVERY .html file that carries a snapshot, not just the three brief pages.",
+   "status": "fixed, guarded"
+  },
+  {
+   "date": "2026-11-17",
+   "id": "D3",
+   "what": "tools/site_update.py restamped EVERY sitemap lastmod and EVERY feed <updated> with today's date, so 42 unchanged article and calculator pages claimed a 17 Nov change and three feed entries shared one timestamp.",
+   "root_cause": "update_sitemap used a blanket <lastmod> replace and update_feed a blanket <updated> replace with no page or entry scope, and neither touched the feed entry's title or summary - a stale summary with a fresh stamp.",
+   "fix": "update_sitemap now restamps only index.html, markets.html and news.html; update_feed now rewrites the feed-level <updated> and the first (market-brief) entry's title, timestamp and summary from the payload. The 17 Nov commit carries the corrected sitemap (3 pages moved, 42 untouched) and a rewritten feed entry.",
    "status": "fixed, guarded"
   }
  ],
@@ -112,6 +120,10 @@
   {
    "date": "2026-11-16",
    "what": "markets.html kept the heading 'Markets - Friday 13 November 2026 close' after the numbers were rewritten: the same D1 defect class, on a string outside every marked region. Corrected in the same commit. site_check.py caught it, which is what D1's guard was for."
+  },
+  {
+   "date": "2026-11-17",
+   "what": "Tuesday-close refresh: all 46 snapshot-bearing pages, the homepage lead and glance table, the markets brief, movers, bullion, key points and sources, the news snapshot strip plus three new 17 Nov cards (the three 13 Nov cards dropped to hold the page at 14 stories), the sitemap lastmods for the three market pages only, the rewritten feed entry, seo-weekly and tech_watch in one commit. update_snapshots now walks every .html file instead of the three market pages, so the 46 baked snapshots cannot drift apart again. Bullion is IBJA's 12:00 IST AM benchmark, labelled, because the 17:00 IST print lands after this 16:30 job."
   }
  ]
 }

@@ -89,12 +89,18 @@ def _delta(q, key, money=False):
 
 
 def render_snapshot(p):
-    return json.dumps({"as_of": p.get("as_of", ""), "label": "Verified close",
-                       "note": "Refreshed automatically each trading evening by Indian FM "
-                               "Insights' own research pipeline, with every figure checked "
-                               "against two independent sources.",
-                       "quotes": p.get("quotes") or {},
-                       "sources": p.get("sources", [])}, indent=2)
+    d = {"as_of": p.get("as_of", ""), "label": "Verified close",
+         "note": p.get("note") or
+                 ("Refreshed automatically each trading evening by Indian FM "
+                  "Insights' own research pipeline, with every figure checked "
+                  "against two independent sources.")}
+    if p.get("session"):
+        d["session"] = p["session"]
+    if p.get("updated"):
+        d["updated"] = p["updated"]
+    d["quotes"] = p.get("quotes") or {}
+    d["sources"] = p.get("sources", [])
+    return json.dumps(d, indent=2)
 
 
 def render_index_lead(p):
@@ -321,7 +327,12 @@ def update_snapshots(site, p, report):
     # evening; every OTHER page picks up the same close at runtime from
     # data/market.json (written below), so a lesson or calculator page can never
     # show a stale ticker without needing to be recommitted every night.
-    for page in ("index.html", "markets.html", "news.html"):
+    pages = []
+    for root, _dirs, files in os.walk(site):
+        for f in files:
+            if f.endswith(".html"):
+                pages.append(os.path.relpath(os.path.join(root, f), site))
+    for page in sorted(pages):
         path = os.path.join(site, page)
         if not os.path.exists(path):
             continue
@@ -351,6 +362,33 @@ def update_sitemap(site, p, report):
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(new)
         report.append("OK   sitemap lastmod -> %s" % iso)
+
+
+def _feed_entry(xml, p, now):
+    """Rewrite the FIRST (market-brief) entry, not just its timestamp: an entry
+    whose date moves while its numbers do not is a stale summary with a fresh
+    stamp. Other entries keep their own dates."""
+    q = p.get("quotes") or {}
+    if (q.get("nifty") or {}).get("value") is None:
+        return xml
+    d = p.get("date_long", "").replace(" close", "")
+    summary = ("Indian market brief in plain English: on %s the Nifty 50 closed at %s (%s, %s) and the "
+               "Sensex at %s (%s, %s), with the rupee at %s per dollar. IBJA's 12:00 IST benchmark put "
+               "24K gold at %s per 10 g (%s) and 999 silver at %s per kg (%s). The next session is %s."
+               % (d, _num(q, "nifty"), _delta(q, "nifty")[0], _pct(q, "nifty")[0],
+                  _num(q, "sensex"), _delta(q, "sensex")[0], _pct(q, "sensex")[0],
+                  _num(q, "usdinr"), _num(q, "gold", money=True), _delta(q, "gold", money=True)[0],
+                  _num(q, "silver", money=True), _delta(q, "silver", money=True)[0],
+                  _esc(p.get("next_session", ""))))
+    m = re.search(r"<entry>\s*<title>Market brief.*?</entry>", xml, re.S)
+    if not m:
+        return xml
+    entry = ("<entry>\n    <title>Market brief \u2014 %s close</title>\n"
+             "    <link href=\"https://indianfminsights.site/markets.html\"/>\n"
+             "    <id>https://indianfminsights.site/markets.html</id>\n"
+             "    <updated>%s</updated>\n    <summary>%s</summary>\n  </entry>"
+             % (_esc(p.get("date_short", "")), now, summary))
+    return xml[:m.start()] + entry + xml[m.end():]
 
 
 def update_feed(site, p, report):
