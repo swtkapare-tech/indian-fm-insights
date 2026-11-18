@@ -42,6 +42,25 @@ def _esc(t):
     return (t or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+RICH_TAGS = (("&lt;b&gt;", "<b>"), ("&lt;/b&gt;", "</b>"),
+             ("&lt;em&gt;", "<em>"), ("&lt;/em&gt;", "</em>"),
+             ("&amp;middot;", "&middot;"), ("&amp;mdash;", "&mdash;"))
+
+
+def _rich(t):
+    """Escape a brief field, then re-permit the four inline tags the page uses.
+
+    Found 18 Nov 2026: the 17 Nov keyfact shipped on markets.html with a literal
+    '&mdash;' and a literal '<b>This page is education, not advice:</b>' visible
+    to the reader, because the field was escaped once and never un-escaped. Only
+    <b>/<em> are re-permitted - no attribute, no script, no href.
+    """
+    s = _esc(t)
+    for a, b in RICH_TAGS:
+        s = s.replace(a, b)
+    return s
+
+
 def _inr(n):
     """Indian digit grouping: 150068 -> 1,50,068."""
     neg = n < 0
@@ -161,8 +180,8 @@ def render_markets_brief(p):
         '        %s\n      </p>\n\n'
         '      <div class="keyfact" style="margin:20px 0">\n'
         '        <b>Why this matters to you:</b> %s\n      </div>'
-        % (_esc(p.get("date_long")), _esc(b.get("headline")), _esc(b.get("para1")),
-           _esc(b.get("para2")), _esc(b.get("keyfact")))
+        % (_esc(p.get("date_long")), _rich(b.get("headline")), _rich(b.get("para1")),
+           _rich(b.get("para2")), _rich(b.get("keyfact")))
     )
 
 
@@ -190,7 +209,7 @@ def render_markets_bullion(p):
         rows += ('          <tr><td class="nm">%s</td><td class="n">%s</td>'
                  '<td class="n ifm-%s">%s</td></tr>\n'
                  % (_esc(r.get("name")), _esc(r.get("level")), r.get("dir", "flat"),
-                    _esc(r.get("note"))))
+                    _rich(r.get("note"))))
     return ('<table class="ifm-table">\n'
             '        <thead><tr><th>Market</th><th style="text-align:right">Level</th>'
             '<th style="text-align:right">Note</th></tr></thead>\n'
@@ -226,6 +245,75 @@ def render_cards(p):
         )
     out.append("</div>")
     return "".join(out)
+
+
+def render_markets_head(p):
+    """The markets page's own <h2> heading.
+
+    Found 18 Nov 2026: this heading sat outside every marker, so it kept the
+    previous session's date after the numbers under it moved - the same defect
+    as D1 on 12 Nov, in the one place the checker could not see it until the
+    checker learned to look at body copy. It is rendered now.
+    """
+    return '<h2>Markets &mdash; %s close</h2>' % _esc(p.get("date_head") or p.get("date_short", ""))
+
+
+def _pct_txt(q, key):
+    """'-2.17%' / '+0.61%' - a signed percentage for the news table, where the
+    arrow glyph the cards use would read as decoration rather than direction."""
+    pct = ((q or {}).get(key) or {}).get("pct")
+    if pct is None:
+        return "\u2014"
+    return "%+.2f%%" % pct
+
+
+def render_news_snapshot(p):
+    """The Market News page's own snapshot block.
+
+    Found 18 Nov 2026: news.html carried a hand-written snapshot table and note
+    that nothing refreshed, so the page kept 17 November's levels and the words
+    'close 17 Nov 2026' while the rest of the site moved on. It is now rendered
+    from the same payload as every other figure on the site.
+    """
+    q = p.get("quotes") or {}
+    stub = p.get("date_stub") or p.get("date_short", "")
+    rows = [
+        ("Sensex (BSE 30)", _num(q, "sensex"),
+         _delta(q, "sensex")[0] + " pts (" + _pct_txt(q, "sensex") + ") &middot; close " + stub,
+         _pct(q, "sensex")[1]),
+        ("Nifty 50 (NSE)", _num(q, "nifty"),
+         _delta(q, "nifty")[0] + " pts (" + _pct_txt(q, "nifty") + ") &middot; close " + stub,
+         _pct(q, "nifty")[1]),
+        ("USD / INR", "&#8377;" + _num(q, "usdinr"),
+         _delta(q, "usdinr")[0] + " (" + _pct_txt(q, "usdinr") + ") &middot; " + stub + " close (PTI, Reuters)",
+         "up" if (_delta(q, "usdinr")[0] or "+").startswith("-") else "down"),
+        ("Gold 24K (10g)", _num(q, "gold", money=True),
+         _delta(q, "gold", money=True)[0] + " (" + _pct_txt(q, "gold") + ") &middot; IBJA " + stub + " AM benchmark",
+         _pct(q, "gold")[1]),
+        ("Silver (1kg)", _num(q, "silver", money=True),
+         _delta(q, "silver", money=True)[0] + " (" + _pct_txt(q, "silver") + ") &middot; IBJA " + stub + " AM benchmark",
+         _pct(q, "silver")[1]),
+    ]
+    body = "".join(
+        '<tr><td>%s</td><td class="num">%s</td><td class="num %s">%s</td></tr>' % (n, lvl, d, ch)
+        for n, lvl, ch, d in rows)
+    s_ch, n_ch = (q.get("sensex") or {}).get("change"), (q.get("nifty") or {}).get("change")
+    note = ("The Sensex %s %s points to %s and the Nifty 50 %s %s points to %s on %s. "
+            "The rupee closed at %s per dollar and IBJA's 12:00 IST benchmark put 24K gold at %s "
+            "per 10 g and 999 silver at %s per kg. Every figure is checked against two independent "
+            "sources dated the same day; the page was refreshed at 16:30 IST. This page is "
+            "education, not advice."
+            % ("fell" if (s_ch or 0) < 0 else "rose", _num(q, "sensex", money=False).replace("\u20b9", "") and
+               ("{:,.2f}".format(abs(s_ch or 0))), _num(q, "sensex"),
+               "lost" if (n_ch or 0) < 0 else "gained", "{:,.2f}".format(abs(n_ch or 0)),
+               _num(q, "nifty"), stub,
+               _num(q, "usdinr"), _num(q, "gold", money=True), _num(q, "silver", money=True)))
+    return ('<h2 style="margin:0 0 10px">Market snapshot &mdash; %s close</h2>\n'
+            '  <div class="tbl"><table class="data"><thead><tr><th scope="col">Market</th>'
+            '<th scope="col" class="num">Level</th><th scope="col" class="num">Day change</th>'
+            '</tr></thead> <tbody>%s</tbody></table></div>\n'
+            '    <p class="tbl-note">%s</p>'
+            % (_esc(stub), body, note))
 
 
 def render_snapshot_card(p):
@@ -357,7 +445,13 @@ def update_sitemap(site, p, report):
         return
     with open(path, encoding="utf-8") as fh:
         xml = fh.read()
-    new = re.sub(r"<lastmod>[^<]*</lastmod>", "<lastmod>%s</lastmod>" % iso, xml)
+    # Scope: only the three pages this run actually rewrites. A blanket
+    # <lastmod> replace once restamped 42 untouched article and calculator
+    # pages with today's date (defect D3, 17 Nov 2026); it must not come back.
+    new = xml
+    for page in ("index.html", "markets.html", "news.html"):
+        pat = r"(<loc>https://indianfminsights\.site/%s</loc>\s*<lastmod>)[^<]*(</lastmod>)" % re.escape(page)
+        new = re.sub(pat, lambda m: m.group(1) + iso + m.group(2), new)
     if new != xml:
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(new)
@@ -372,7 +466,10 @@ def _feed_entry(xml, p, now):
     if (q.get("nifty") or {}).get("value") is None:
         return xml
     d = p.get("date_long", "").replace(" close", "")
-    summary = ("Indian market brief in plain English: on %s the Nifty 50 closed at %s (%s, %s) and the "
+    if p.get("feed_summary"):
+        summary = p["feed_summary"]
+    else:
+        summary = ("Indian market brief in plain English: on %s the Nifty 50 closed at %s (%s, %s) and the "
                "Sensex at %s (%s, %s), with the rupee at %s per dollar. IBJA's 12:00 IST benchmark put "
                "24K gold at %s per 10 g (%s) and 999 silver at %s per kg (%s). The next session is %s."
                % (d, _num(q, "nifty"), _delta(q, "nifty")[0], _pct(q, "nifty")[0],
@@ -401,7 +498,11 @@ def update_feed(site, p, report):
     now = iso + "T16:30:00+05:30"
     with open(path, encoding="utf-8") as fh:
         xml = fh.read()
-    new = re.sub(r"<updated>[^<]*</updated>", "<updated>%s</updated>" % now, xml)
+    # Scope: the feed-level <updated> only (the first one), and then the first
+    # entry's title, timestamp and summary. A blanket replace gave every entry
+    # the same fresh stamp while its summary stayed stale (defect D3).
+    new = re.sub(r"<updated>[^<]*</updated>", "<updated>%s</updated>" % now, xml, count=1)
+    new = _feed_entry(new, p, now)
     if new != xml:
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(new)
@@ -463,6 +564,7 @@ def main():
     update_snapshots(a.site_dir, p, rep)
     update_file(os.path.join(a.site_dir, "index.html"), "LEAD", render_index_lead(p), rep)
     update_file(os.path.join(a.site_dir, "index.html"), "GLANCE", render_index_glance(p), rep)
+    update_file(os.path.join(a.site_dir, "markets.html"), "HEAD", render_markets_head(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "BRIEF", render_markets_brief(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "MOVED", render_markets_moved(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "BULLION", render_markets_bullion(p), rep)
@@ -471,6 +573,7 @@ def main():
     update_file(os.path.join(a.site_dir, "markets.html"), "SNAPSHOT", render_snapshot_card(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "KEYPOINTS", render_keypoints(p), rep)
     update_file(os.path.join(a.site_dir, "markets.html"), "SOURCES", render_sources(p), rep)
+    update_file(os.path.join(a.site_dir, "news.html"), "NEWSNAP", render_news_snapshot(p), rep)
     write_market_json(a.site_dir, p, rep)
     update_sitemap(a.site_dir, p, rep)
     update_feed(a.site_dir, p, rep)

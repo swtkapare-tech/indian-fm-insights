@@ -1,7 +1,7 @@
 {
  "week_ending": "2026-11-22",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-19 to 2026-11-16",
+ "window": "2026-10-19 to 2026-11-17",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
@@ -144,8 +144,8 @@
   "queries_returned": 9,
   "pages_with_impressions": 6
  },
- "ga4": "no property - the Analytics connector returns no account and no property (empty response on 17 Nov 2026); sessions not measurable",
- "action": "Sitemap resubmitted on 17 Nov 2026 after the Tuesday close (45 URLs, 0 errors). Inspected what-is-ipo.html - the highest-impression page - and xirr-vs-cagr.html, the best-placed article page; no third URL was inspected, to stay inside the inspection rate limit. Both return PASS, 'Submitted and indexed', robots ALLOWED, indexing allowed and the correct canonical, but both still carry lastCrawlTime 2026-10-31 (11:43:36Z and 11:44:13Z): the resubmissions on 14, 15, 16 and 17 Nov have still not produced a recrawl, so none of the November changes are in the index. That remains an open item for Swati (manual 'Request indexing' or new internal links), not something this job can force.",
- "note": "Read 17 Nov 2026 over 19 Oct - 16 Nov: the same nine query rows and the same six pages as the 15 and 16 Nov reads, figure for figure (32 impressions on the returned query rows, 0 clicks, 9 queries, 6 pages). Search Console lags 2-3 days and 17 Nov carries no data yet, so this is a confirmation read, not a new data point. The nearest demand is still the IPO cluster (what-is-ipo.html, 25 impressions, average position 54.6) and the XIRR/CAGR cluster (xirr-vs-cagr.html, 12 impressions, average position 28.9 - the best-placed article page). Query-level striking distance is still EMPTY: the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. GA4 still returns no account and no property, so sessions remain unmeasurable; no property was provisioned.",
- "read_on": "2026-11-17"
+ "ga4": "no property - the Analytics connector returned an empty response again on 18 Nov 2026 (no account, no property); sessions not measurable",
+ "action": "Sitemap resubmitted on 18 Nov 2026 at 11:11 UTC (45 URLs submitted, 0 errors, 0 warnings, isPending true, lastDownloaded 17 Nov 11:12 UTC). Inspected the two priority pages. what-is-ipo.html has CHANGED: Google recrawled it on 17 Nov 2026 11:52 UTC - so the resubmissions did finally work - but the verdict moved from 'Submitted and indexed' to 'Crawled - currently not indexed' (NEUTRAL), robots ALLOWED, fetch SUCCESSFUL, canonical correct. xirr-vs-cagr.html is unchanged: PASS, 'Submitted and indexed', lastCrawlTime still 31 Oct 2026 11:44 UTC. No third URL was inspected, to stay inside the rate limit.",
+ "note": "Read 18 Nov 2026 over 19 Oct - 17 Nov: the same nine query rows, the same six pages and the same 32 impressions on the returned query rows as the 15, 16 and 17 Nov reads, figure for figure. Search Console lags 2-3 days and 18 Nov carries no data yet, so this is a confirmation read, not a new data point. Query-level striking distance is still EMPTY: the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance is still the homepage (position 9.5, 2 impressions) and why-gold-prices-move.html (position 6.0, 1 impression). The one thing that moved is not a number: what-is-ipo.html was recrawled and then dropped from the index, which is a content decision for Swati, not a data gap. GA4 still returns no account and no property, so sessions remain unmeasurable; no property was provisioned.",
+ "read_on": "2026-11-18"
 }

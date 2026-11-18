@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-17",
-  "note": "The Analytics connector is authorised but returns no account and no property (an empty response on 16 Nov 2026). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-18",
+  "note": "The Analytics connector is authorised but again returned no account and no property (an empty response on 18 Nov 2026). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -68,6 +68,30 @@
    "root_cause": "update_sitemap used a blanket <lastmod> replace and update_feed a blanket <updated> replace with no page or entry scope, and neither touched the feed entry's title or summary - a stale summary with a fresh stamp.",
    "fix": "update_sitemap now restamps only index.html, markets.html and news.html; update_feed now rewrites the feed-level <updated> and the first (market-brief) entry's title, timestamp and summary from the payload. The 17 Nov commit carries the corrected sitemap (3 pages moved, 42 untouched) and a rewritten feed entry.",
    "status": "fixed, guarded"
+  },
+  {
+   "date": "2026-11-18",
+   "id": "D8",
+   "what": "markets.html shipped the keyfact with a literal '&mdash;' and a literal '<b>This page is education, not advice:</b>' visible to the reader, and the currency row of the bullion table with a literal '&middot;'.",
+   "root_cause": "render_markets_brief and render_markets_bullion ran every brief field through _esc() and nothing un-escaped the four inline tags and two entities the page actually uses, so the payload's markup reached the browser as text.",
+   "fix": "New _rich() helper: escape first, then re-permit only <b>, </b>, <em>, </em>, &middot; and &mdash; - no attribute, no href, no script. Applied to headline, both paragraphs, the keyfact and the bullion note.",
+   "status": "fixed, guarded by eye - site_check.py has no assertion for visible entity text yet, and adding one is the next guard to write"
+  },
+  {
+   "date": "2026-11-18",
+   "id": "D9",
+   "what": "news.html carried a hand-written market snapshot table, note and heading that nothing refreshed: on the morning of 18 Nov it still read 'Market snapshot - 17 November 2026 close' with Tuesday's five levels, while every other page had moved.",
+   "root_cause": "The news page's snapshot was built by hand on 12 Nov and never given a marker region, so site_update.py had no way to reach it. The same class of defect as D1 and D3: a dated block outside every owned region.",
+   "fix": "The block is now a NEWSNAP marker region rendered from the same payload as every other figure (render_news_snapshot), and the markets page <h2> 'Markets - ... close' - which had also drifted back to the previous session's date - is now a HEAD region (render_markets_head). site_check.py's body-date rule caught the heading within one run of it reappearing.",
+   "status": "fixed, guarded"
+  },
+  {
+   "date": "2026-11-18",
+   "id": "D10",
+   "what": "update_sitemap and update_feed still contained the blanket regexes that D3 (17 Nov) records as fixed: a global <lastmod> replace and a global <updated> replace. Only the files themselves had been corrected by hand, so tonight's run would have restamped 42 untouched pages and given all four feed entries one timestamp.",
+   "root_cause": "D3's fix was applied to the sitemap.xml and feed.xml output, not to the code that produces them - the ledger said 'fixed, guarded' while the defect was still one run away from returning.",
+   "fix": "update_sitemap now restamps only index.html, markets.html and news.html by matching each <loc> pair; update_feed replaces the feed-level <updated> (count=1) and rewrites the first entry through _feed_entry. Verified this run: 42 lastmods left at 2026-11-06, 3 moved to 2026-11-18, and the three non-brief feed entries left at 2026-11-13.",
+   "status": "fixed, guarded"
   }
  ],
  "open_items": [
@@ -82,9 +106,9 @@
    "owner": "a design decision, not a data fix"
   },
   {
-   "item": "what-is-ipo.html was last crawled by Google on 31 Oct 2026 and the 14 Nov sitemap resubmission has not triggered a recrawl.",
-   "why_it_matters": "The page is the site's best demand signal (25 impressions, position 54.6) and it is being ranked on a crawl from 31 Oct 2026 - 16 days old - so none of the November content changes are in the index.",
-   "owner": "needs a decision - the sitemap resubmission is the only lever this job has; a manual 'Request indexing' in Search Console, or internal links from newer pages, would have to come from Swati"
+   "item": "what-is-ipo.html was recrawled by Google on 17 Nov 2026 11:52 UTC and came back 'Crawled - currently not indexed'.",
+   "why_it_matters": "The page is the site's best demand signal (25 impressions, average position 54.6). It is no longer a crawl-lag problem - Google fetched the current page and chose not to index it, so the next lever is content quality and internal links, not another resubmission.",
+   "owner": "needs Swati's decision - this job can measure it and must not fix it by adding words to a lesson"
   },
   {
    "item": "No page of the site carries the ARN-366695 / NSE AP-2069591891 disclosure block that the social captions carry.",
@@ -124,6 +148,10 @@
   {
    "date": "2026-11-17",
    "what": "Tuesday-close refresh: all 46 snapshot-bearing pages, the homepage lead and glance table, the markets brief, movers, bullion, key points and sources, the news snapshot strip plus three new 17 Nov cards (the three 13 Nov cards dropped to hold the page at 14 stories), the sitemap lastmods for the three market pages only, the rewritten feed entry, seo-weekly and tech_watch in one commit. update_snapshots now walks every .html file instead of the three market pages, so the 46 baked snapshots cannot drift apart again. Bullion is IBJA's 12:00 IST AM benchmark, labelled, because the 17:00 IST print lands after this 16:30 job."
+  },
+  {
+   "date": "2026-11-18",
+   "what": "Wednesday-close refresh: all 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news page's snapshot block (now rendered, not hand-written) plus three new 18 Nov cards (the two 11 Nov cards and the 7 Oct RBI card dropped to hold the page at 14 stories), the sitemap lastmods for the three market pages only, the rewritten feed entry, seo-weekly and tech_watch in one commit. Three defects fixed on the way: D8 (escaped entities visible on markets.html), D9 (news snapshot and markets heading outside every owned region), D10 (the D3 blanket-regex fix existed in the output, not in the code)."
   }
  ]
 }
