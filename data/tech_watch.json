@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-18",
+ "updated": "2026-11-21",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-18",
-  "note": "The Analytics connector is authorised but again returned no account and no property (an empty response on 18 Nov 2026). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-21",
+  "note": "The Analytics connector returned an empty account summary again on 21 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -92,6 +92,22 @@
    "root_cause": "D3's fix was applied to the sitemap.xml and feed.xml output, not to the code that produces them - the ledger said 'fixed, guarded' while the defect was still one run away from returning.",
    "fix": "update_sitemap now restamps only index.html, markets.html and news.html by matching each <loc> pair; update_feed replaces the feed-level <updated> (count=1) and rewrites the first entry through _feed_entry. Verified this run: 42 lastmods left at 2026-11-06, 3 moved to 2026-11-18, and the three non-brief feed entries left at 2026-11-13.",
    "status": "fixed, guarded"
+  },
+  {
+   "date": "2026-11-21",
+   "id": "D11",
+   "what": "The visible Sources & method block on markets.html printed HTML entities as text: '&mdash;' between every clause and '&#8377;' before every rupee figure, because the payload's sources array carried entities and render_sources escapes with _esc(), which turned '&' into '&amp;'.",
+   "root_cause": "Same class as D8, in the one field D8 did not cover: _rich() un-escapes the six tokens the brief body uses, but sources go through plain _esc(), so any entity written into a source string double-escapes.",
+   "fix": "The payload now carries literal characters (em dash, rupee sign, middle dot, ampersand) instead of entities, so _esc() produces the right output with no un-escaping step. Verified on the built page: zero occurrences of '&amp;mdash;' and '&amp;#8377;' in the SOURCES region.",
+   "status": "fixed - site_check.py still has no assertion for visible entity text, which is the next guard to write"
+  },
+  {
+   "date": "2026-11-21",
+   "id": "D12",
+   "what": "The brief and the rupee news card described the 20 Nov rupee close as 'its first close above 93 since 10 April' while printing a level of 92.67, which is below 93. Read literally the page contradicted itself.",
+   "root_cause": "PTI's copy says the rupee 'closed above the 93 level', Indian market shorthand for 'stronger than 93 to the dollar'. The phrase was carried over without being turned into plain English for a reader who reads 92.67 as the number.",
+   "fix": "Headline, dek, brief paragraph, news card and sources now say 'stronger than 93 to the dollar'. The level, 92.67, is unchanged and still verified twice.",
+   "status": "fixed"
   }
  ],
  "open_items": [
@@ -152,6 +168,10 @@
   {
    "date": "2026-11-18",
    "what": "Wednesday-close refresh: all 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news page's snapshot block (now rendered, not hand-written) plus three new 18 Nov cards (the two 11 Nov cards and the 7 Oct RBI card dropped to hold the page at 14 stories), the sitemap lastmods for the three market pages only, the rewritten feed entry, seo-weekly and tech_watch in one commit. Three defects fixed on the way: D8 (escaped entities visible on markets.html), D9 (news snapshot and markets heading outside every owned region), D10 (the D3 blanket-regex fix existed in the output, not in the code)."
+  },
+  {
+   "date": "2026-11-21",
+   "what": "Weekend refresh - the calendar gate returned non-trading day (Saturday), so there is no 21 Nov close. All 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block, the feed entry, seo-weekly and tech_watch were rebuilt from one payload and committed together; the five levels are Friday 20 November 2026's and are labelled with that date on every page. No number changed, because no session happened: the work today was re-verification (two sources per figure, all dated 20 Nov), the D11 entity fix, the D12 wording fix, and the GSC housekeeping."
   }
  ]
 }

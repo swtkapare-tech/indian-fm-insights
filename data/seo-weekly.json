@@ -1,17 +1,10 @@
 {
  "week_ending": "2026-11-22",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-19 to 2026-11-17",
+ "window": "2026-10-24 to 2026-11-19",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
-  {
-   "page": "https://indianfminsights.site/",
-   "impressions": 2,
-   "position": 9.5,
-   "band": "striking distance - page 1, position 5-20",
-   "note": "The homepage holds a page-one position on a brand-adjacent query; the market brief it links to is the natural next click."
-  },
   {
    "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
    "impressions": 1,
@@ -66,7 +59,7 @@
    "clicks": 0,
    "impressions": 9,
    "ctr": 0.0,
-   "position": 46.56,
+   "position": 46.6,
    "band": "page 2-5 - visible but far from page 1"
   },
   {
@@ -95,13 +88,6 @@
   }
  ],
  "pages": [
-  {
-   "page": "https://indianfminsights.site/",
-   "clicks": 0,
-   "impressions": 2,
-   "position": 9.5,
-   "band": "striking distance - page 1, position 5-20"
-  },
   {
    "page": "https://indianfminsights.site/articles/market-falls-sip.html",
    "clicks": 0,
@@ -142,10 +128,8 @@
   "impressions_sum_of_returned_query_rows": 32,
   "clicks": 0,
   "queries_returned": 9,
-  "pages_with_impressions": 6
+  "pages_with_impressions": 5
  },
- "ga4": "no property - the Analytics connector returned an empty response again on 21 Nov 2026 (no account, no property); sessions not measurable",
- "action": "Sitemap resubmitted on 21 Nov 2026 after the 20 Nov close was published (45 URLs, 0 errors, 0 warnings). The two priority pages were inspected on 20 Nov and not re-inspected today, to stay inside the rate limit: what-is-ipo.html is 'Crawled - currently not indexed' (NEUTRAL), robots ALLOWED, fetch SUCCESSFUL, canonical correct, last crawl 17 Nov 2026 11:52 UTC; xirr-vs-cagr.html is PASS, 'Submitted and indexed', last crawl 31 Oct 2026 11:44 UTC, breadcrumbs detected.",
- "note": "Read 21 Nov 2026 over 19 Oct - 17 Nov: the same nine query rows, the same six pages and the same 32 impressions on the returned query rows as the 18, 17, 16 and 15 Nov reads, figure for figure. Search Console lags 2-3 days, so a Saturday read adds nothing new: this is a confirmation read, not a new data point. Query-level striking distance is still EMPTY - the best query position is 39.0 ('ipo in share market'), so no query has reached the 5-20 band. Page-level striking distance is still the homepage (position 9.5, 2 impressions) and why-gold-prices-move.html (position 6.0, 1 impression). The open item is not a number: what-is-ipo.html carries the most impressions of any page (25) and remains crawled but not indexed, which is a content decision for Swati. GA4 still returns no account and no property, so sessions remain unmeasurable; no property was provisioned.",
- "read_on": "2026-11-21"
+ "ga4": "no property - the Analytics connector returned an empty account list again on 21 Nov 2026 (no account, no property); sessions not measurable and never estimated",
+ "action": "Sitemap resubmitted on 21 Nov 2026 at 16:30 IST (success: true) so Google recrawls the three market pages whose lastmod moved with the 20 Nov close. Both priority lesson pages were inspected the same run: what-is-ipo.html is 'Crawled - currently not indexed' (NEUTRAL), robots ALLOWED, fetch SUCCESSFUL, canonical correct, last crawl 17 Nov 2026 11:52 UTC - unchanged since 17 Nov, which is the page to work on next; xirr-vs-cagr.html is PASS, 'Submitted and indexed', last crawl 31 Oct 2026 11:44 UTC. No query sits in the 5-20 band this window, so the striking-distance list is empty again and the demand read stays where it was: nine queries, 32 impressions, zero clicks, the best of them 'ipo in share market' at 39.0."
 }
