@@ -1,7 +1,8 @@
 {
  "week_ending": "2026-11-22",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-24 to 2026-11-19",
+ "window": "2026-10-25 to 2026-11-21",
+ "pulled": "2026-11-22T16:30:00+05:30",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
@@ -10,7 +11,7 @@
    "impressions": 1,
    "position": 6.0,
    "band": "striking distance - page 1, position 5-20",
-   "note": "One impression only, so a lead rather than a trend: the strongest position of any article page this window."
+   "note": "One impression only, so a lead rather than a trend: the strongest position of any article page this window, unchanged from last week."
   }
  ],
  "queries": [
@@ -130,6 +131,6 @@
   "queries_returned": 9,
   "pages_with_impressions": 5
  },
- "ga4": "no property - the Analytics connector returned an empty account list again on 21 Nov 2026 (no account, no property); sessions not measurable and never estimated",
- "action": "Sitemap resubmitted on 21 Nov 2026 at 16:30 IST (success: true) so Google recrawls the three market pages whose lastmod moved with the 20 Nov close. Both priority lesson pages were inspected the same run: what-is-ipo.html is 'Crawled - currently not indexed' (NEUTRAL), robots ALLOWED, fetch SUCCESSFUL, canonical correct, last crawl 17 Nov 2026 11:52 UTC - unchanged since 17 Nov, which is the page to work on next; xirr-vs-cagr.html is PASS, 'Submitted and indexed', last crawl 31 Oct 2026 11:44 UTC. No query sits in the 5-20 band this window, so the striking-distance list is empty again and the demand read stays where it was: nine queries, 32 impressions, zero clicks, the best of them 'ipo in share market' at 39.0."
+ "ga4": "no property - the Analytics connector returned an empty account summary again on 22 Nov 2026 (no account, no property); sessions not measurable and never estimated",
+ "action": "Pulled 22 Nov 2026 at 16:30 IST for the 28 days to 21 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC - still the page to work on, and still a content and internal-link problem rather than a resubmission one; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); what-is-sip.html is NEUTRAL, 'Crawled - currently not indexed' (last crawl 15 Nov 2026 00:42 UTC). No query sits in the 5-20 striking-distance band, so the list is empty for a third week: nine queries, 32 impressions, zero clicks. The read is flat week on week - only 'what is ipo in india' moved (8 to 9 impressions). The one page-level lead stays why-gold-prices-move.html at position 6.0 on a single impression, which is a lead, not a trend."
 }

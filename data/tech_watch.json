@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-21",
-  "note": "The Analytics connector returned an empty account summary again on 21 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-22",
+  "note": "The Analytics connector returned an empty account summary again on 22 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -108,6 +108,14 @@
    "root_cause": "PTI's copy says the rupee 'closed above the 93 level', Indian market shorthand for 'stronger than 93 to the dollar'. The phrase was carried over without being turned into plain English for a reader who reads 92.67 as the number.",
    "fix": "Headline, dek, brief paragraph, news card and sources now say 'stronger than 93 to the dollar'. The level, 92.67, is unchanged and still verified twice.",
    "status": "fixed"
+  },
+  {
+   "date": "2026-11-22",
+   "id": "D13",
+   "what": "The homepage and markets headline still read 'as the rupee strengthens past 93' while the page printed 92.67. D12 said the headline had been reworded; the reworded string was in the brief body, not in the h1, which is the line most readers see.",
+   "root_cause": "The D12 fix was applied to the paragraphs and the news card and the headline was checked by eye, not by the checker; site_check.py asserts levels and dates, never the direction words around a level.",
+   "fix": "Headline now reads 'as the rupee strengthens below 93 to the dollar', which is unambiguous against a level of 92.67. Both the homepage h1 and the markets h1 come from the same payload field, so they cannot diverge.",
+   "status": "fixed - the missing guard is a checker assertion that flags a direction word contradicted by the level next to it"
   }
  ],
  "open_items": [
@@ -172,6 +180,10 @@
   {
    "date": "2026-11-21",
    "what": "Weekend refresh - the calendar gate returned non-trading day (Saturday), so there is no 21 Nov close. All 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block, the feed entry, seo-weekly and tech_watch were rebuilt from one payload and committed together; the five levels are Friday 20 November 2026's and are labelled with that date on every page. No number changed, because no session happened: the work today was re-verification (two sources per figure, all dated 20 Nov), the D11 entity fix, the D12 wording fix, and the GSC housekeeping."
+  },
+  {
+   "date": "2026-11-22",
+   "what": "Sunday refresh - the calendar gate returned non-trading day (Sunday 22 November 2026), so there is no 22 Nov close. The five levels are Friday 20 November 2026's, re-verified against two independent sources dated that session (NSE's own index file and Moneycontrol/ET Now/BusinessLine for the indices, Reuters and PTI for the rupee, IBJA's own rate table and Moneycontrol/5paisa for bullion), and every one matched digit for digit, so nothing was re-estimated. All 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block and the feed entry were rebuilt from one payload and committed together; the note and session status now name the Saturday 21 and Sunday 22 closure and the Monday 23 November next session. The sitemap lastmod deliberately did not move: it is pinned to the session date, 2026-11-20, and restamping it to the refresh day would misdate the pages. D13 fixed on the way. Search Console: sitemap resubmitted, three priority lesson pages inspected, striking-distance list empty for a third week; GA4 still returns no property."
   }
  ]
 }
