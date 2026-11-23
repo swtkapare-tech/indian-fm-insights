@@ -5,7 +5,7 @@
   "end": "2026-11-21",
   "days": 28
  },
- "pulled": "2026-11-22T16:30:00+05:30",
+ "pulled": "2026-11-23T16:30:00+05:30",
  "source": "Google Search Console, searchAnalytics by query and by page",
  "totals": {
   "impressions_sum_of_returned_query_rows": 32,
@@ -188,5 +188,5 @@
    "band": "page 2-5 - visible but far from page 1"
   }
  ],
- "read": "No striking-distance query again this week. Best visible demand: 'ipo in share market' at 39.0 on 4 impressions and 'what is ipo in india' at 46.6 on 9 impressions, both landing on what-is-ipo.html, which Google has crawled and declined to index. The demand read therefore points at one page, not at a keyword gap."
+ "read": "No striking-distance query again this week, and the rows are unchanged from the 22 Nov pull. Best visible demand: 'ipo in share market' at 39.0 on 4 impressions and 'what is ipo in india' at 46.6 on 9 impressions, both landing on what-is-ipo.html, which Google has crawled and declined to index. The demand read therefore points at one page, not at a keyword gap."
 }

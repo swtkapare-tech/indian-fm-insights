@@ -1,8 +1,8 @@
 {
- "week_ending": "2026-11-22",
+ "week_ending": "2026-11-23",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-25 to 2026-11-21",
- "pulled": "2026-11-22T16:30:00+05:30",
+ "window": "2026-10-26 to 2026-11-22",
+ "pulled": "2026-11-23T16:30:00+05:30",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
@@ -131,6 +131,6 @@
   "queries_returned": 9,
   "pages_with_impressions": 5
  },
- "ga4": "no property - the Analytics connector returned an empty account summary again on 22 Nov 2026 (no account, no property); sessions not measurable and never estimated",
- "action": "Pulled 22 Nov 2026 at 16:30 IST for the 28 days to 21 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC - still the page to work on, and still a content and internal-link problem rather than a resubmission one; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); what-is-sip.html is NEUTRAL, 'Crawled - currently not indexed' (last crawl 15 Nov 2026 00:42 UTC). No query sits in the 5-20 striking-distance band, so the list is empty for a third week: nine queries, 32 impressions, zero clicks. The read is flat week on week - only 'what is ipo in india' moved (8 to 9 impressions). The one page-level lead stays why-gold-prices-move.html at position 6.0 on a single impression, which is a lead, not a trend."
+ "ga4": "no property - the Analytics connector returned an empty account summary again on 23 Nov 2026 (no account, no property); sessions not measurable and never estimated",
+ "action": "Pulled 23 Nov 2026 at 16:30 IST for the 28 days to 22 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC - still the page to work on, and still a content and internal-link problem rather than a resubmission one; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); why-gold-prices-move.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:48 UTC). No query sits in the 5-20 striking-distance band, so the list is empty for a fourth week: nine queries, 32 impressions, zero clicks - the same nine rows and the same totals as the 22 Nov pull, so the read is flat, not falling. The one page-level lead stays why-gold-prices-move.html at position 6.0 on a single impression, which is a lead, not a trend."
 }
