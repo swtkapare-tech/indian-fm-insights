@@ -1,17 +1,17 @@
 {
- "week_ending": "2026-11-23",
+ "week_ending": "2026-11-24",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-26 to 2026-11-22",
- "pulled": "2026-11-23T16:30:00+05:30",
+ "window": "2026-10-27 to 2026-11-23",
+ "pulled": "2026-11-24T16:30:00+05:30",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
   {
    "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
-   "impressions": 1,
-   "position": 6.0,
-   "band": "striking distance - page 1, position 5-20",
-   "note": "One impression only, so a lead rather than a trend: the strongest position of any article page this window, unchanged from last week."
+   "impressions": 2,
+   "position": 4.5,
+   "band": "page 1 - top of the results",
+   "note": "Two impressions at position 4.5, up from one at 6.0 last week. The strongest position of any article page, but still a lead on tiny numbers rather than a trend."
   }
  ],
  "queries": [
@@ -90,18 +90,18 @@
  ],
  "pages": [
   {
-   "page": "https://indianfminsights.site/articles/market-falls-sip.html",
-   "clicks": 0,
-   "impressions": 3,
-   "position": 57.3,
-   "band": "far - beyond position 50"
-  },
-  {
    "page": "https://indianfminsights.site/articles/what-is-ipo.html",
    "clicks": 0,
    "impressions": 25,
    "position": 54.6,
    "band": "far - beyond position 50"
+  },
+  {
+   "page": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
+   "clicks": 0,
+   "impressions": 13,
+   "position": 26.8,
+   "band": "page 2-5 - visible but far from page 1"
   },
   {
    "page": "https://indianfminsights.site/articles/what-is-sip.html",
@@ -111,26 +111,34 @@
    "band": "far - beyond position 50"
   },
   {
-   "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
+   "page": "https://indianfminsights.site/articles/market-falls-sip.html",
    "clicks": 0,
-   "impressions": 1,
-   "position": 6.0,
-   "band": "striking distance - page 1, position 5-20"
+   "impressions": 3,
+   "position": 57.3,
+   "band": "far - beyond position 50"
   },
   {
-   "page": "https://indianfminsights.site/articles/xirr-vs-cagr.html",
+   "page": "https://indianfminsights.site/articles/why-gold-prices-move.html",
    "clicks": 0,
-   "impressions": 12,
-   "position": 28.9,
-   "band": "page 2-5 - visible but far from page 1"
+   "impressions": 2,
+   "position": 4.5,
+   "band": "page 1 - top of the results"
+  },
+  {
+   "page": "https://indianfminsights.site/",
+   "clicks": 0,
+   "impressions": 1,
+   "position": 1.0,
+   "band": "page 1 - top of the results"
   }
  ],
  "totals": {
-  "impressions_sum_of_returned_query_rows": 32,
+  "impressions_sum_of_returned_query_rows": 48,
   "clicks": 0,
   "queries_returned": 9,
-  "pages_with_impressions": 5
+  "pages_with_impressions": 6,
+  "note": "The property totals row gives 48 impressions and 0 clicks at an average position of 46.5 for the window; query rows exclude anonymised queries and need not sum to it."
  },
- "ga4": "no property - the Analytics connector returned an empty account summary again on 23 Nov 2026 (no account, no property); sessions not measurable and never estimated",
- "action": "Pulled 23 Nov 2026 at 16:30 IST for the 28 days to 22 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC - still the page to work on, and still a content and internal-link problem rather than a resubmission one; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); why-gold-prices-move.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:48 UTC). No query sits in the 5-20 striking-distance band, so the list is empty for a fourth week: nine queries, 32 impressions, zero clicks - the same nine rows and the same totals as the 22 Nov pull, so the read is flat, not falling. The one page-level lead stays why-gold-prices-move.html at position 6.0 on a single impression, which is a lead, not a trend."
+ "ga4": "no property - the Analytics connector returned an empty account summary again on 24 Nov 2026 (no account, no property); sessions not measurable and never estimated",
+ "action": "Pulled 24 Nov 2026 at 16:30 IST for the 28 days to 23 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is still NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC and unchanged since the 23 Nov pull; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); why-gold-prices-move.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:48 UTC). No query sits in the 5-20 striking-distance band, so that list is empty for a fifth week. The read is no longer flat: impressions rose from 32 to 48 and the homepage entered the page rows at position 1.0 on a single impression, but clicks are still zero across all nine queries, so the site is being shown and not chosen. The one page-level lead is why-gold-prices-move.html at position 4.5 on 2 impressions, better than last week's 6.0 - a lead on tiny numbers, not a trend."
 }

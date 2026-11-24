@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-22",
+ "updated": "2026-11-24",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-22",
-  "note": "The Analytics connector returned an empty account summary again on 22 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-24",
+  "note": "The Analytics connector returned an empty account summary again on 24 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -184,6 +184,10 @@
   {
    "date": "2026-11-22",
    "what": "Sunday refresh - the calendar gate returned non-trading day (Sunday 22 November 2026), so there is no 22 Nov close. The five levels are Friday 20 November 2026's, re-verified against two independent sources dated that session (NSE's own index file and Moneycontrol/ET Now/BusinessLine for the indices, Reuters and PTI for the rupee, IBJA's own rate table and Moneycontrol/5paisa for bullion), and every one matched digit for digit, so nothing was re-estimated. All 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block and the feed entry were rebuilt from one payload and committed together; the note and session status now name the Saturday 21 and Sunday 22 closure and the Monday 23 November next session. The sitemap lastmod deliberately did not move: it is pinned to the session date, 2026-11-20, and restamping it to the refresh day would misdate the pages. D13 fixed on the way. Search Console: sitemap resubmitted, three priority lesson pages inspected, striking-distance list empty for a third week; GA4 still returns no property."
+  },
+  {
+   "date": "2026-11-24",
+   "what": "Holiday refresh - the calendar gate returned a listed market holiday (Prakash Gurpurb Sri Guru Nanak Dev), so there was no 24 Nov close. All 48 snapshot-bearing pages, the homepage lead and glance table, the markets heading, kicker, brief, movers, bullion, key points and sources, the news snapshot block and the feed entry were rebuilt from one payload and committed together. The five levels are Monday 23 November 2026's and are labelled with that date on every page; the brief now opens by saying the exchanges are shut today and that no level shown is today's close. Every figure was re-verified against two independent sources dated 23 Nov 2026 and all five matched digit for digit, so no number changed. The sources block was rewritten to what was actually verified today: NSE's own end-of-day index file added for the indices, EODData added for USD/INR, and the Bhavflow attribution removed because Bhavflow publishes its own indicative bullion rate rather than IBJA's fixing - on 24 Nov it showed 1,25,255 and 1,51,456, which are not IBJA's numbers. IBJA's PM fixing for 23 Nov, now published at 1,24,945 and 1,52,625, is recorded in the sources while the AM benchmark stays the published basis so the comparison with the previous session stays like-for-like. GSC: sitemap resubmitted, three priority pages inspected, no striking-distance query for a fifth week. GA4: still no property."
   }
  ]
 }
