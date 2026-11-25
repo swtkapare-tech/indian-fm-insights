@@ -1,53 +1,53 @@
 {
-  "as_of": "2026-11-23T15:30:00+05:30",
+  "as_of": "2026-11-25T15:30:00+05:30",
   "label": "Verified close",
-  "note": "Refreshed by Indian FM Insights' own research pipeline, with every figure checked against two independent sources. The exchanges were closed on Tuesday 24 November 2026 for Prakash Gurpurb Sri Guru Nanak Dev, so there is no close today: the levels on this page are Monday 23 November 2026's, carried forward and re-verified this evening against sources dated 23 Nov 2026. Indices and the rupee are the 15:30 IST close; bullion is IBJA's 12:00 IST (AM) benchmark, used throughout so the comparison with the previous session stays like-for-like. The next session is Wednesday 25 November 2026.",
+  "note": "Refreshed by Indian FM Insights' own research pipeline, with every figure checked against two independent sources dated 25 November 2026. Indices are the 15:30 IST close; the rupee is the interbank closing level; bullion is IBJA's 12:00 IST (AM) benchmark, used throughout so the comparison with the previous session stays like-for-like. Education, not advice: this page names no stock, no fund, no target and no expected return.",
   "session": {
-    "date": "2026-11-23",
-    "label": "Monday, 23 November 2026",
-    "status": "No session on Tuesday 24 November 2026 \u2014 a listed exchange holiday (Prakash Gurpurb Sri Guru Nanak Dev). The levels shown are Monday 23 November 2026's close, re-verified on 24 Nov 2026 at 16:30 IST. Next session: Wednesday 25 November 2026"
+    "date": "2026-11-25",
+    "label": "Wednesday, 25 November 2026",
+    "status": "A full trading session. The levels below are Wednesday 25 November 2026's own close, verified on the day against two independent sources. Next session: Thursday 26 November 2026"
   },
-  "updated": "2026-11-24T16:30:00+05:30",
+  "updated": "2026-11-25T16:30:00+05:30",
   "quotes": {
     "nifty": {
-      "value": 25349.65,
-      "change": -450.95,
-      "pct": -1.75,
+      "value": 25819.25,
+      "change": 469.6,
+      "pct": 1.85,
       "dp": 2
     },
     "sensex": {
-      "value": 82435.99,
-      "change": -1483.72,
-      "pct": -1.77,
+      "value": 83938.28,
+      "change": 1502.29,
+      "pct": 1.82,
       "dp": 2
     },
     "usdinr": {
-      "value": 92.92,
-      "change": 0.25,
-      "pct": 0.27,
+      "value": 92.23,
+      "change": -0.69,
+      "pct": -0.74,
       "dp": 2
     },
     "gold": {
-      "value": 125123,
-      "change": 1539,
-      "pct": 1.25,
+      "value": 121310,
+      "change": -3813,
+      "pct": -3.05,
       "dp": 0
     },
     "silver": {
-      "value": 152941,
-      "change": 2291,
-      "pct": 1.52,
+      "value": 143522,
+      "change": -9419,
+      "pct": -6.16,
       "dp": 0
     }
   },
   "sources": [
-    "Nifty 50 close 25,349.65 (-450.95, -1.75%) and Sensex close 82,435.99 (-1,483.72, -1.77%) \u2014 NSE's own end-of-day index file for 23-11-2026 (ind_close_all_23112026.csv), which gives the Nifty's open 25,929.15, high 25,992.60, low 25,343.85 and close 25,349.65; PTI's closing report carried by The Hindu, The Hindu BusinessLine and Rediff on 23 Nov 2026; The Economic Times' and Zee Business's closing-bell reports of 23 Nov 2026; and Reuters' closing report carried by Business Recorder the same day. trackliveprice's NSE end-of-day table gives the same closes with the same high and low",
-    "Session shape (Nifty intraday high 25,992.60, its highest since February, and low 25,343.85; Sensex down more than 2,200 points from its intraday high of 84,662.96) \u2014 NSE's 23 Nov 2026 index file, Zee Business's closing-bell report and trackliveprice's index table, all dated 23 Nov 2026",
-    "Why the indices fell (broad-based profit-taking after a four-week rally, selling in bank, financial, metal and energy shares, and a global sell-off in AI-linked technology stocks) \u2014 Reuters via Business Recorder, Moneycontrol and Business Today, all 23 Nov 2026",
-    "USD / INR 92.92 (provisional) \u2014 PTI's closing report, carried by The Hindu, The Hindu BusinessLine and ETBFSI on 23 Nov 2026, which puts the rupee 30 paise weaker after a low of 93.11; and EODData's end-of-day USD/INR table, which gives 23 Nov 2026 as open 92.66, high 93.08, low 92.40, close 92.92. Reuters' closing report the same day put the rupee at 92.91, one paisa away, and this page publishes the level that two independent sources carry, 92.92, rather than averaging the two. Against the 92.67 close recorded on this page that is +0.25 (+0.27%); PTI measures the move from a previous close of 92.62 and so states 30 paise",
-    "Gold 24K 999 \u20b91,25,123 per 10 g and silver 999 \u20b91,52,941 per kg \u2014 IBJA's 23 Nov 2026 AM benchmark (12:00 IST), reported at those exact figures by Moneycontrol's 23 Nov 2026 gold and silver live blog, and carried in the IBJA AM tables published the same day by rozbhav, LetsInvest and PSU Connect. Against the previous session's AM benchmark of \u20b91,23,584 and \u20b91,50,650 that is +\u20b91,539 (+1.25%) and +\u20b92,291 (+1.52%). IBJA's PM fixing for 23 Nov has since printed at \u20b91,24,945 for 24K gold and \u20b91,52,625 for silver (rozbhav, LetsInvest, PTI's Mumbai bullion closing rate via News18); the AM benchmark is kept throughout so the comparison stays like-for-like",
-    "One caution recorded for the reader's benefit: the PDF titled 'IBJA Bullion Daily Report 23-11-2026' hosted on ibja.co still carries the previous session's table (24K AM \u20b91,23,584, silver AM \u20b91,50,650, with a spot-rate list ending 20 Nov 2026). It is not used here; the figures above are the ones IBJA's 23 Nov AM session reports through Moneycontrol, rozbhav, LetsInvest and PSU Connect. Sites that publish their own indicative bullion rate rather than IBJA's fixing (Bhavflow, for one) quote different numbers and are not used",
-    "Session date \u2014 the skill's own calendar (assets/market_calendar.json, NSE/BSE CY2026 holiday list), run on 24 Nov 2026: 23 Nov 2026 is a Monday and a trading day; 24 Nov 2026 is a listed holiday (Prakash Gurpurb Sri Guru Nanak Dev) and returned no close, so the levels above are the last session's, labelled with that session's date. The next session is Wednesday 25 Nov 2026",
-    "Re-verification, Tuesday 24 November 2026, 16:30 IST \u2014 because the exchanges were shut today, every figure on this page was re-checked against two independent sources carrying the 23 Nov 2026 session before this refresh: Nifty 50 25,349.65 (NSE end-of-day index file; PTI via The Hindu and BusinessLine), Sensex 82,435.99 (NSE file; PTI; Zee Business; Economic Times), USD/INR 92.92 (PTI via The Hindu and ETBFSI; EODData), gold \u20b91,25,123 and silver \u20b91,52,941 (IBJA AM via Moneycontrol; rozbhav; LetsInvest; PSU Connect). No figure was estimated, none was carried forward silently, and no level is presented as today's close"
+    "Nifty 50 close 25,819.25 (+469.60, +1.85%) and Sensex close 83,938.28 (+1,502.29, +1.82%) \u2014 PTI's closing report for 25 Nov 2026, carried by Rediff Moneynews and The Hindu BusinessLine; and the closing-bell reports of Moneycontrol, Business Standard and India Today, all dated 25 Nov 2026, which give the identical two closes; screenercharts' end-of-day wrap for 25 Nov 2026 carries 25,819.25 and 83,938.28 as well",
+    "Session shape (Nifty open 25,658.35, high 25,951.65, low 25,619; Sensex open 83,436.89, high 84,498.21, low 83,380.75; Nifty FMCG +3.8%, Nifty Bank +1.79%, India VIX 17.67) \u2014 India Today's 25 Nov 2026 market report and screenercharts' 25 Nov 2026 wrap",
+    "Why the indices rose (renewed foreign portfolio inflows, lower crude oil prices, a stronger rupee, and buying in bank, financial and FMCG shares after Monday's profit-booking) \u2014 Reuters via Moneycontrol and The Hindu BusinessLine, PTI via Rediff Moneynews, and Business Standard, all dated 25 Nov 2026",
+    "USD / INR 92.23 \u2014 Reuters' closing report for 25 Nov 2026, carried by Moneycontrol at 16:12 IST, which states the rupee 'ended 0.7% higher for the day at 92.23'; and gazatte.co's USD/INR quote for 25 November 2026, which gives 92.23 (-0.55, -0.59%), with bharatvox showing \u20b992.23 for the same date. Two independent sources carry 92.23, so that is the level published. PTI's provisional close was 92.16 (69 paise stronger), EODData's end-of-day table gives 92.32 and investing.com 92.365; this page publishes the level two sources agree on rather than averaging the spread. Against the 92.92 recorded on this page for the previous session, that is -0.69 (-0.74%); PTI measures the move from a previous close of 92.85 and so states 69 paise",
+    "Gold 24K 999 \u20b91,21,310 per 10 g and silver 999 \u20b91,43,522 per kg \u2014 IBJA's 25 Nov 2026 AM benchmark (12:00 IST), reported at those exact figures by Times Bull's IBJA rate report of 25 Nov 2026, mybankifsccode's IBJA AM benchmark page for 25 November 2026, IBN24News and trackliveprice's IBJA silver 999 AM page for 25 Nov 2026. Against the previous working session's AM benchmark of \u20b91,25,123 and \u20b91,52,941 that is -\u20b93,813 (-3.05%) and -\u20b99,419 (-6.16%). Silver's fall took it to a 13-month low, as reported by Bhaskar English and Divya Marathi on 25 Nov 2026",
+    "One caution recorded for the reader's benefit: the PDF titled 'IBJA Bullion Daily Report 25-11-2026' hosted on ibja.co still carries the 23 November table (24K AM \u20b91,25,123, silver AM \u20b91,52,941, with a spot-rate list ending 23 Nov 2026). It is not used here. Outlets that quote IBJA's 23 November PM fixing of \u20b91,24,945 and \u20b91,52,625 (Goodreturns, Bhaskar) or city retail rates (Mint, Business Today) are not used either, because the page keeps the AM benchmark throughout so the comparison stays like-for-like. Bhavflow, which publishes its own indicative rate rather than IBJA's fixing, is not used",
+    "Session date \u2014 the skill's own calendar (assets/market_calendar.json, NSE/BSE CY2026 holiday list), run on 25 Nov 2026: 25 Nov 2026 is a Wednesday and a trading day, so the levels above are that session's own close. The previous session, Monday 23 November, was followed by a listed holiday on Tuesday 24 November (Prakash Gurpurb Sri Guru Nanak Dev). The next session is Thursday 26 November 2026",
+    "Verification, Wednesday 25 November 2026, 16:30 IST \u2014 every figure on this page was checked against two independent sources carrying the 25 Nov 2026 session before this refresh: Nifty 50 25,819.25 and Sensex 83,938.28 (PTI via Rediff Moneynews and BusinessLine; Moneycontrol; Business Standard; India Today), USD/INR 92.23 (Reuters via Moneycontrol; gazatte.co), gold \u20b91,21,310 and silver \u20b91,43,522 (IBJA AM via Times Bull; mybankifsccode; IBN24News; trackliveprice). No figure was estimated and none was carried forward silently"
   ]
 }
