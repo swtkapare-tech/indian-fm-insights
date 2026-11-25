@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-24",
-  "note": "The Analytics connector returned an empty account summary again on 24 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-25",
+  "note": "The Analytics connector returned an empty account summary again on 25 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -188,6 +188,14 @@
   {
    "date": "2026-11-24",
    "what": "Holiday refresh - the calendar gate returned a listed market holiday (Prakash Gurpurb Sri Guru Nanak Dev), so there was no 24 Nov close. All 48 snapshot-bearing pages, the homepage lead and glance table, the markets heading, kicker, brief, movers, bullion, key points and sources, the news snapshot block and the feed entry were rebuilt from one payload and committed together. The five levels are Monday 23 November 2026's and are labelled with that date on every page; the brief now opens by saying the exchanges are shut today and that no level shown is today's close. Every figure was re-verified against two independent sources dated 23 Nov 2026 and all five matched digit for digit, so no number changed. The sources block was rewritten to what was actually verified today: NSE's own end-of-day index file added for the indices, EODData added for USD/INR, and the Bhavflow attribution removed because Bhavflow publishes its own indicative bullion rate rather than IBJA's fixing - on 24 Nov it showed 1,25,255 and 1,51,456, which are not IBJA's numbers. IBJA's PM fixing for 23 Nov, now published at 1,24,945 and 1,52,625, is recorded in the sources while the AM benchmark stays the published basis so the comparison with the previous session stays like-for-like. GSC: sitemap resubmitted, three priority pages inspected, no striking-distance query for a fifth week. GA4: still no property."
+  }
+ ],
+ "daily_log": [
+  {
+   "date": "2026-11-25",
+   "what": "Site Market Brief refresh - full trading session",
+   "detail": "Calendar gate exit 0. Nifty 50 25,819.25, Sensex 83,938.28, USD/INR 92.23, IBJA 24K gold 1,21,310, silver 1,43,522, each from two independent 25 Nov sources. Three 25 Nov news cards added (20 -> 23). site_check.py PASS.",
+   "seo": "GSC pulled for 28 days to 24 Nov: 9 queries, 48 impressions, 0 clicks, position 46.5, no striking-distance query. Sitemap resubmitted (success). Three priority pages inspected: what-is-ipo NEUTRAL (crawled, not indexed), xirr-vs-cagr PASS, why-gold-prices-move PASS. GA4 still no property."
   }
  ]
 }

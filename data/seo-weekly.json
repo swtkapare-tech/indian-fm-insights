@@ -1,8 +1,8 @@
 {
- "week_ending": "2026-11-24",
+ "week_ending": "2026-11-25",
  "property": "https://indianfminsights.site/",
- "window": "2026-10-27 to 2026-11-23",
- "pulled": "2026-11-24T16:30:00+05:30",
+ "window": "2026-10-28 to 2026-11-24",
+ "pulled": "2026-11-25T16:30:00+05:30",
  "first_rows_date": "2026-11-03",
  "striking_distance": [],
  "page_striking_distance": [
@@ -11,7 +11,7 @@
    "impressions": 2,
    "position": 4.5,
    "band": "page 1 - top of the results",
-   "note": "Two impressions at position 4.5, up from one at 6.0 last week. The strongest position of any article page, but still a lead on tiny numbers rather than a trend."
+   "note": "Two impressions at position 4.5, unchanged for a second week. Still the strongest position of any article page, and still a lead on tiny numbers rather than a trend."
   }
  ],
  "queries": [
@@ -137,8 +137,8 @@
   "clicks": 0,
   "queries_returned": 9,
   "pages_with_impressions": 6,
-  "note": "The property totals row gives 48 impressions and 0 clicks at an average position of 46.5 for the window; query rows exclude anonymised queries and need not sum to it."
+  "note": "The property totals row gives 48 impressions and 0 clicks at an average position of 46.5 for the window, the same as the 24 Nov pull. Query rows exclude anonymised queries and need not sum to it."
  },
- "ga4": "no property - the Analytics connector returned an empty account summary again on 24 Nov 2026 (no account, no property); sessions not measurable and never estimated",
- "action": "Pulled 24 Nov 2026 at 16:30 IST for the 28 days to 23 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is still NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC and unchanged since the 23 Nov pull; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); why-gold-prices-move.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:48 UTC). No query sits in the 5-20 striking-distance band, so that list is empty for a fifth week. The read is no longer flat: impressions rose from 32 to 48 and the homepage entered the page rows at position 1.0 on a single impression, but clicks are still zero across all nine queries, so the site is being shown and not chosen. The one page-level lead is why-gold-prices-move.html at position 4.5 on 2 impressions, better than last week's 6.0 - a lead on tiny numbers, not a trend."
+ "ga4": "no property - the Analytics connector returned an empty account summary again on 25 Nov 2026 (no account, no property); sessions not measurable and never estimated",
+ "action": "Pulled 25 Nov 2026 at 16:30 IST for the 28 days to 24 Nov 2026. Sitemap resubmitted the same run (success: true). Priority lesson pages inspected sparingly, three only: what-is-ipo.html is still NEUTRAL, 'Crawled - currently not indexed', last crawl 17 Nov 2026 11:52 UTC and unchanged for a third pull; xirr-vs-cagr.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:44 UTC); why-gold-prices-move.html is PASS, 'Submitted and indexed' (last crawl 31 Oct 2026 11:48 UTC). No query sits in the 5-20 striking-distance band, so that list is empty for a sixth week. The read is flat this week: the window rolled forward one day and not one new query, impression or click appeared - still 9 queries, 48 impressions, 0 clicks, average position 46.5. The site is being shown for a handful of long-tail 'what is IPO' and 'xirr vs cagr' phrases and chosen for none of them, which is a titles-and-snippets problem on pages Google has crawled but not indexed. what-is-ipo.html carries 25 of the 48 impressions at position 54.6 and is the one page worth rewriting first; why-gold-prices-move.html at position 4.5 on 2 impressions is the only page-level lead and needs more impressions, not better ones."
 }

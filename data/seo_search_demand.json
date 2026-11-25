@@ -1,11 +1,11 @@
 {
  "property": "https://indianfminsights.site/",
  "window": {
-  "start": "2026-10-27",
-  "end": "2026-11-23",
+  "start": "2026-10-28",
+  "end": "2026-11-24",
   "days": 28
  },
- "pulled": "2026-11-24T16:30:00+05:30",
+ "pulled": "2026-11-25T16:30:00+05:30",
  "source": "Google Search Console, searchAnalytics by query and by page",
  "totals": {
   "impressions_sum_of_returned_query_rows": 48,
@@ -136,5 +136,5 @@
    "band": "page 1 - top of the results"
   }
  ],
- "read": "Nine queries, 48 impressions, zero clicks, average position 46.5. No striking-distance query for a fifth week. what-is-ipo.html carries 25 of the 48 impressions and is still not indexed; why-gold-prices-move.html sits at 4.5 on two impressions."
+ "read": "Sixth week with no query in the 5-20 striking-distance band. 48 impressions, 0 clicks, average position 46.5 - identical to the 24 Nov pull, because the window moved one day and the data did not. what-is-ipo.html holds 25 of the 48 impressions at 54.6 and is the page to rewrite first. why-gold-prices-move.html at 4.5 on 2 impressions is the only page-level lead. GA4 still has no property."
 }
