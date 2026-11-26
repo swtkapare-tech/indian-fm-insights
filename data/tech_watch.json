@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-25",
-  "note": "The Analytics connector returned an empty account summary again on 25 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-26",
+  "note": "The Analytics connector returned an empty account summary again on 26 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -191,6 +191,12 @@
   }
  ],
  "daily_log": [
+  {
+   "date": "2026-11-26",
+   "what": "Site Market Brief refresh - full trading session",
+   "detail": "Calendar gate: trading_day.py exit 0 (Thursday 26 November 2026). Nifty 50 25,884.50 (+65.25, +0.25%), Sensex 84,328.59 (+390.31, +0.46%), USD/INR 92.44 (+0.21, +0.23%), IBJA 24K gold 1,22,982 (+1,672, +1.38%) and silver 1,46,933 (+3,411, +2.38%), each from two independent 26 Nov sources. One payload rebuilt 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block, data/market.json, the feed entry and the sitemap lastmod, all in one pass. site_check.py PASS: 5 quotes, 23 news cards, no dated string older than the session, sitemap and feed agree.",
+   "seo": "GSC pulled for 28 days to 25 Nov: 9 queries, 48 impressions, 0 clicks, position 46.5, no striking-distance query (seventh flat week). Sitemap resubmitted (success). Three priority pages inspected: what-is-ipo NEUTRAL (crawled 17 Nov, not indexed), xirr-vs-cagr PASS, why-gold-prices-move PASS. GA4 still no property."
+  },
   {
    "date": "2026-11-25",
    "what": "Site Market Brief refresh - full trading session",
