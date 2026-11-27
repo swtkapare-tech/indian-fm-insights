@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -191,6 +191,12 @@
   }
  ],
  "daily_log": [
+  {
+   "date": "2026-11-27",
+   "what": "Site Market Brief refresh - full trading session",
+   "detail": "Calendar gate: trading_day.py exit 0 (Friday 27 November 2026); setup_env.py SETUP OK on the second pass. Nifty 50 25,607.20 (-277.30, -1.07%), Sensex 83,339.26 (-989.33, -1.17%), USD/INR 92.98 (+0.54 vs this page's 92.44, +0.58%), IBJA 24K gold 1,25,316 (+2,334, +1.90%) and silver 1,53,275 (+6,342, +4.32%), each from two independent 27 Nov sources. One payload rebuilt 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block, data/market.json, the feed entry and the sitemap lastmod, all in one pass. site_check.py PASS: 5 quotes, 23 news cards, no dated string older than the session, sitemap and feed agree. Rupee note: PTI (provisional) and FinBizNet both carry 92.98; Reuters via ET and ET's own page show 92.99. The page publishes the level two sources agree on, 92.98, and says so in the sources block.",
+   "seo": "GSC pulled for 28 days to 26 Nov: 9 queries, 48 impressions, 0 clicks, position 46.5, no striking-distance query (eighth flat week). Sitemap resubmitted (success). Three priority pages inspected: what-is-ipo NEUTRAL (crawled 17 Nov, not indexed, fifth pull unchanged), xirr-vs-cagr PASS, why-gold-prices-move PASS. GA4 connector returned an empty account summary again - still no property, sessions not measurable."
+  },
   {
    "date": "2026-11-26",
    "what": "Site Market Brief refresh - full trading session",
