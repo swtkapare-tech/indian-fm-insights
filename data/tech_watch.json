@@ -1,6 +1,6 @@
 {
  "_readme": "THE CONTINUOUS-IMPROVEMENT LEDGER for indianfminsights.site. One entry per check, defect or change made to the site. A run that changes the site must add a line here; if this file has no entry for a date, the site was not worked on that day. Never record a credential here - name a tool or a file, never a token.",
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "gsc_loop": {
   "property": "https://indianfminsights.site/",
   "first_rows_date": "2026-11-03",
@@ -9,8 +9,8 @@
  },
  "ga4": {
   "state": "no property",
-  "checked": "2026-11-26",
-  "note": "The Analytics connector returned an empty account summary again on 26 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
+  "checked": "2026-11-28",
+  "note": "The Analytics connector returned an empty account summary again on 28 Nov 2026 (no account, no property). Sessions stay unmeasurable and are never estimated. Setting up GA4 is Swati's call, not a run's."
  },
  "defects_found": [
   {
@@ -191,6 +191,12 @@
   }
  ],
  "daily_log": [
+  {
+   "date": "2026-11-28",
+   "what": "Site Market Brief refresh - weekend carry, no trading session",
+   "detail": "Calendar gate: trading_day.py exit 3 (Saturday 28 November 2026 - weekend; the 19:00 reel slot becomes Weekend Pulse). No close was set today, so the page carries Friday 27 November 2026's close and labels it as such: Nifty 50 25,607.20 (-277.30, -1.07%), Sensex 83,339.26 (-989.33, -1.17%), USD/INR 92.98 (+0.54, +0.58%), IBJA 24K gold 1,25,316 (+2,334, +1.90%) and silver 1,53,275 (+6,342, +4.32%), each re-verified on 28 Nov from two independent sources carrying the 27 Nov session date. Levels are unchanged because there was no session to change them. One payload rebuilt the 46 snapshot-bearing pages, the homepage lead and glance table, the markets heading and brief, movers, bullion, key points and sources, the news snapshot block, data/market.json (updated 28 Nov 16:30, session status names the weekend closure and Monday 30 Nov next session) and the feed entry. Sitemap lastmod deliberately left at the session date 2026-11-27, the site's own convention on a carry day, and the sitemap was resubmitted to Search Console. site_check.py PASS: 5 quotes, 23 news cards, no dated string older than the published session.",
+   "seo": "GSC pulled for 28 days to 27 Nov: 9 queries, 48 impressions, 0 clicks, position 46.5, no striking-distance query (ninth flat week). Sitemap resubmitted (success). Two priority pages inspected: what-is-ipo NEUTRAL (crawled 17 Nov, still not indexed - sixth pull, unchanged), xirr-vs-cagr PASS. GA4 still no property."
+  },
   {
    "date": "2026-11-27",
    "what": "Site Market Brief refresh - full trading session",
